@@ -9,4 +9,7 @@ KTH Royal Institute of Technology in Stockholm<br>
 * [Tina Karrbom Gustavsson](mailto:tina.karrbom@abe.kth.se) - Associate professor
 * [Malena Havenvid](mailto:malena.havenvid@abe.kth.se) - Associate professor
 
+### Supervisor 
+* [Väino Tarandi](vaino.tarandi@abe.kth.se)
+
 ## TODO
