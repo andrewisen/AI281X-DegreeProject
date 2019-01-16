@@ -1029,7 +1029,7 @@
       "MaximumValue": 6000.0,
       "MinimumValue": 2000.0,
       "StepValue": 100.0,
-      "InputValue": 2600.0,
+      "InputValue": 5200.0,
       "Id": "0ffeb83a891e47e083b4e2f50fc064f2",
       "Inputs": [],
       "Outputs": [
@@ -1093,6 +1093,94 @@
       ],
       "Replication": "Auto",
       "Description": "Set one of the element's parameters.\n\nElement.SetParameterByName (parameterName: string, value: var): Element"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.WriteText@string,string",
+      "Id": "00e6bef32e8f4c9683513f0c3c588b86",
+      "Inputs": [
+        {
+          "Id": "9942712503184f079ea33346f5124e4b",
+          "Name": "filePath",
+          "Description": "Path to write to\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6c14b28f738b40d586841c67dad244cd",
+          "Name": "text",
+          "Description": "Text content\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b425378c19c04a40919e21cacca1d28b",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Write the text content to a file specified by the path\n\nFileSystem.WriteText (filePath: string, text: string): void"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "C:\\_DegreeProject-Spring19-AndreWisen\\_GitHub\\AI281X-DegreeProject\\dummy.txt",
+      "Id": "d7391f6a3b984f6aa98b2a2f27d6f775",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "50c3e303f2744de1984e00d5fb2420cc",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.FromObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "cad6bb36197649e091b22f3d360de05d",
+      "Inputs": [
+        {
+          "Id": "3e90bb181edd49cf814e77828b737f76",
+          "Name": "obj",
+          "Description": "Object to be serialized",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a1eff218c6ce43a6b36a2a6e6ce39f88",
+          "Name": "str",
+          "Description": "Result of math computation",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Convert an object to a string representation."
     }
   ],
   "Connectors": [
@@ -1267,6 +1355,11 @@
       "Id": "870641149f1e4cf8989711d87dc035b4"
     },
     {
+      "Start": "540c9eae587944dbb4062ee36e8e8ff1",
+      "End": "3e90bb181edd49cf814e77828b737f76",
+      "Id": "c781bf6b144e42e481380b598fe90004"
+    },
+    {
       "Start": "9e60362694ba4fecb386242f206279a5",
       "End": "f85f13d2945749458f1eaa108b26a461",
       "Id": "284af1d271924af4af66b58768c64100"
@@ -1285,6 +1378,16 @@
       "Start": "61538d629eb24e5cb143b2a26a2f819c",
       "End": "6e94cbf3e2d4475eabd878292e6b4dcb",
       "Id": "ac6fd0fb98d14dfea69eeda630f0cafa"
+    },
+    {
+      "Start": "50c3e303f2744de1984e00d5fb2420cc",
+      "End": "9942712503184f079ea33346f5124e4b",
+      "Id": "25c10a2f20474e13a7f066d90b27ffa9"
+    },
+    {
+      "Start": "a1eff218c6ce43a6b36a2a6e6ce39f88",
+      "End": "6c14b28f738b40d586841c67dad244cd",
+      "Id": "39d0002f4eef41fab262cda44c18d0a2"
     }
   ],
   "Dependencies": [],
@@ -1648,8 +1751,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 6871.8852467664747,
-        "Y": 815.63998455449678
+        "X": 7055.8463423006651,
+        "Y": 385.67174351304561
       },
       {
         "ShowGeometry": true,
@@ -1670,6 +1773,36 @@
         "Excluded": false,
         "X": 7193.8161830856188,
         "Y": 97.899565127526671
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.WriteText",
+        "Id": "00e6bef32e8f4c9683513f0c3c588b86",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7870.19365338303,
+        "Y": 393.387908954781
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "d7391f6a3b984f6aa98b2a2f27d6f775",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7415.6315718941514,
+        "Y": 382.29994263686609
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String from Object",
+        "Id": "cad6bb36197649e091b22f3d360de05d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 7592.3847804227344,
+        "Y": 250.56940943681013
       }
     ],
     "Annotations": [
@@ -1824,8 +1957,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -663.07977096353568,
-    "Y": 335.07570062801926,
-    "Zoom": 0.28664833660557232
+    "X": -7193.2445588361943,
+    "Y": -184.16710410815597,
+    "Zoom": 1.2039822720192033
   }
 }
