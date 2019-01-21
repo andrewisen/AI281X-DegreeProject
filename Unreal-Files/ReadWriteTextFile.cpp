@@ -11,3 +11,11 @@ bool URWTxtFile::SaveTxt(FString SaveTextB, FString FileNameB)
 {
 	return FFileHelper::SaveStringToFile(SaveTextB, *(FPaths::GameDir() + FileNameB));
 }
+
+
+bool URWTxtFile::WriteTxt(FString SaveTextB, FString FileNameB)
+{
+	// https://api.unrealengine.com/INT/API/Runtime/Core/Misc/FFileHelper/SaveStringToFile/index.html
+	return FFileHelper::SaveStringToFile(SaveTextB, *(FileNameB));
+}
+
