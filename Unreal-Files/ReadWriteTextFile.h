@@ -10,7 +10,7 @@
  * 
  */
 UCLASS()
-class LIGHTTEST_190117_API UReadWriteTextFile : public UBlueprintFunctionLibrary
+class LIGHTTEST_190117_API URWTxtFile : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY() public:
 
