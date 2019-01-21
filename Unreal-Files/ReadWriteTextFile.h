@@ -17,8 +17,10 @@ class LIGHTTEST_190117_API URWTxtFile : public UBlueprintFunctionLibrary
 		UFUNCTION(BlueprintPure, Category = "Custom", meta = (Keywords = "LoadTxt"))
 			static bool LoadTxt(FString FileNameA, FString& SaveTextA);
 
+		// N.B: A BlueprintCallable function will have execution pins so that you can chain your C++ functions together in UE4 Blueprints.
 		UFUNCTION(BlueprintCallable, Category = "Custom", meta = (Keywords = "SaveTxt"))
 			static bool SaveTxt(FString SaveTextB, FString FileNameB);
+
 
 
 };

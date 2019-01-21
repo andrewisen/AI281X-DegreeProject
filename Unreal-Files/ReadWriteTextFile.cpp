@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// EU4 Test Class
 
 #include "ReadWriteTextFile.h"
 
