@@ -12,6 +12,13 @@
 UCLASS()
 class LIGHTTEST_190117_API UReadWriteTextFile : public UBlueprintFunctionLibrary
 {
-	GENERATED_BODY()
-	
+	GENERATED_BODY() public:
+
+		UFUNCTION(BlueprintPure, Category = "Custom", meta = (Keywords = "LoadTxt"))
+			static bool LoadTxt(FString FileNameA, FString& SaveTextA);
+
+		UFUNCTION(BlueprintCallable, Category = "Custom", meta = (Keywords = "SaveTxt"))
+			static bool SaveTxt(FString SaveTextB, FString FileNameB);
+
+
 };
