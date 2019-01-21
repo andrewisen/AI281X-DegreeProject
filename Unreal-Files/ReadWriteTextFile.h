@@ -22,6 +22,6 @@ class LIGHTTEST_190117_API URWTxtFile : public UBlueprintFunctionLibrary
 			static bool SaveTxt(FString SaveTextB, FString FileNameB);
 
 		UFUNCTION(BlueprintCallable, Category = "Custom", meta = (Keywords = "WriteTxt"))
-			static bool SaveTxt(FString SaveTextB, FString FileNameB);
+			static bool WriteTxt(FString SaveTextB, FString FileNameB);
 
 };
