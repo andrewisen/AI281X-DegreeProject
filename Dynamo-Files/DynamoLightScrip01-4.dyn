@@ -1623,26 +1623,6 @@
       "Description": "Returns the first item in a list.\n\nList.FirstItem (list: var[]..[]): var[]..[]"
     },
     {
-      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
-      "NodeType": "BooleanInputNode",
-      "InputValue": false,
-      "Id": "8db0f56497964d42910440296d0466ec",
-      "Inputs": [],
-      "Outputs": [
-        {
-          "Id": "b1232be136194e1f865965d7b78ec59a",
-          "Name": "",
-          "Description": "Boolean",
-          "UsingDefaultValue": false,
-          "Level": 2,
-          "UseLevels": false,
-          "KeepListStructure": false
-        }
-      ],
-      "Replication": "Disabled",
-      "Description": "Selection between a true and false."
-    },
-    {
       "ConcreteType": "CoreNodeModels.Logic.If, CoreNodeModels",
       "NodeType": "ExtensionNode",
       "Id": "184b792ed88e4c2ab4182e5ec8073116",
@@ -1951,6 +1931,35 @@
       ],
       "Replication": "Disabled",
       "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b393e2df3c3b46d587ce241d98ce566e",
+      "Inputs": [
+        {
+          "Id": "2541cdc908e34a48947fb0b1abba78b9",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "16ba5e312cc740daaacefe952ce60427",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
     }
   ],
   "Connectors": [
@@ -2245,21 +2254,6 @@
       "Id": "8d04c86799704fa58e7d61cce63c1c68"
     },
     {
-      "Start": "b1232be136194e1f865965d7b78ec59a",
-      "End": "3ad5e52c3f6c422b9f49efff953ce3da",
-      "Id": "24ddfa7cbc54479f9c8417bc464d1286"
-    },
-    {
-      "Start": "b1232be136194e1f865965d7b78ec59a",
-      "End": "11bf77049e7449b585f23b009fc9c501",
-      "Id": "5525dde126274203853f3c512c0a8737"
-    },
-    {
-      "Start": "b1232be136194e1f865965d7b78ec59a",
-      "End": "71628f9f195c4f30bd37282fc29a1b43",
-      "Id": "86742c0a5e54450dbcbb4091dda09a31"
-    },
-    {
       "Start": "43eb2a93fb294b898cc059e681a268e7",
       "End": "682220aec452416cb2e5e2458ea85a2f",
       "Id": "ba11457977254386a47d7ccb388024a3"
@@ -2295,9 +2289,34 @@
       "Id": "b1fd23688c6c4548963a1e7de33c16c1"
     },
     {
+      "Start": "d2870e54453840989848d0d11074047b",
+      "End": "454e84a6316e460fab1a00375dccc02e",
+      "Id": "b5a00c409f1a4930aebae7624f196168"
+    },
+    {
+      "Start": "d2870e54453840989848d0d11074047b",
+      "End": "2541cdc908e34a48947fb0b1abba78b9",
+      "Id": "d00e9a5e0d064f57acd64b60c0edb99f"
+    },
+    {
       "Start": "33db5b2fe695467d9152d991d58119c1",
       "End": "a1b2edb454b64eb1914df534267d7c57",
       "Id": "930d9c1271b04028aa6711767d67058f"
+    },
+    {
+      "Start": "3b25ab16ceaa4784b980267f670af941",
+      "End": "11bf77049e7449b585f23b009fc9c501",
+      "Id": "177bf283d52748f0887b86609d918a6c"
+    },
+    {
+      "Start": "3b25ab16ceaa4784b980267f670af941",
+      "End": "3ad5e52c3f6c422b9f49efff953ce3da",
+      "Id": "4231675225314fe7b719229195be08e2"
+    },
+    {
+      "Start": "3b25ab16ceaa4784b980267f670af941",
+      "End": "71628f9f195c4f30bd37282fc29a1b43",
+      "Id": "9e3315ae86c9493a96db849e44fa5f53"
     }
   ],
   "Dependencies": [],
@@ -2856,16 +2875,6 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "Read?",
-        "Id": "8db0f56497964d42910440296d0466ec",
-        "IsSetAsInput": false,
-        "IsSetAsOutput": false,
-        "Excluded": false,
-        "X": 2122.8461385681576,
-        "Y": 1011.2165559867365
-      },
-      {
-        "ShowGeometry": true,
         "Name": "If",
         "Id": "184b792ed88e4c2ab4182e5ec8073116",
         "IsSetAsInput": false,
@@ -2951,8 +2960,18 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1022.5616120695774,
-        "Y": 1430.3769075515665
+        "X": 2248.2672775613441,
+        "Y": 1192.9008363745581
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "b393e2df3c3b46d587ce241d98ce566e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4346.1835971617529,
+        "Y": 1541.7762081650117
       }
     ],
     "Annotations": [
@@ -3307,7 +3326,6 @@
         "Id": "9a8de7883e65495ab1b5d476ec8d5562",
         "Title": "6. FILE I/O",
         "Nodes": [
-          "8db0f56497964d42910440296d0466ec",
           "184b792ed88e4c2ab4182e5ec8073116",
           "0bdd1babd75042dcb74a7474de8fd35a",
           "00e6bef32e8f4c9683513f0c3c588b86",
@@ -3316,9 +3334,9 @@
           "7e2cec2f0b38451784fc6c3f6c7ea3b0",
           "a65e137b075f480f994c84ef6d13f494"
         ],
-        "Left": 2112.8461385681576,
+        "Left": 2113.1215296908877,
         "Top": 789.22249726271639,
-        "Width": 1146.8462034000258,
+        "Width": 1146.5708122772958,
         "Height": 447.72498202475435,
         "FontSize": 36.0,
         "InitialTop": 842.22249726271639,
@@ -3692,8 +3710,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 776.41694949619068,
-    "Y": -46.837567210464272,
-    "Zoom": 0.17533107501300327
+    "X": -149.31909063129183,
+    "Y": 194.39688770267605,
+    "Zoom": 0.28436171219732909
   }
 }
