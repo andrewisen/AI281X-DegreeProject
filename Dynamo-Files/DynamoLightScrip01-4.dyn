@@ -1378,7 +1378,7 @@
     {
       "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
       "NodeType": "BooleanInputNode",
-      "InputValue": false,
+      "InputValue": true,
       "Id": "074ac00962b54eef8e23fd98ffe66bc9",
       "Inputs": [],
       "Outputs": [
@@ -1955,8 +1955,8 @@
     },
     {
       "Start": "50c3e303f2744de1984e00d5fb2420cc",
-      "End": "46d6779be51e42f796281a5d9f7a1b16",
-      "Id": "8c939e8525a943f59a33e42e3144d128"
+      "End": "a933009fe68046c39bb85a317f1ff079",
+      "Id": "0efbbf84bb9843c4a2c84288c61d2c0e"
     },
     {
       "Start": "7b0698c8d9d84aecaa0a613e49b84b49",
@@ -2025,8 +2025,8 @@
     },
     {
       "Start": "3c4309fcf77548ae9bdf19b91a39d700",
-      "End": "a933009fe68046c39bb85a317f1ff079",
-      "Id": "8649730c07de45b88ba8aed2f81b680c"
+      "End": "46d6779be51e42f796281a5d9f7a1b16",
+      "Id": "93c4160e96164c5eb347fea519f83f99"
     },
     {
       "Start": "90cab8d182cb4bfc97d3f87e15350ab4",
@@ -2375,8 +2375,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2738.5537007948451,
-        "Y": 1032.2224972627164
+        "X": 2979.6923419681834,
+        "Y": 1043.7510378765812
       },
       {
         "ShowGeometry": true,
@@ -2385,8 +2385,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2738.5537007948451,
-        "Y": 898.22249726271627
+        "X": 2982.5744771216491,
+        "Y": 910.711749594403
       },
       {
         "ShowGeometry": true,
@@ -2560,12 +2560,12 @@
       },
       {
         "ShowGeometry": true,
-        "Name": "BREAK LINK",
+        "Name": "KEEP LINK?",
         "Id": "074ac00962b54eef8e23fd98ffe66bc9",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": -488.430649687189,
+        "X": -489.8194681937216,
         "Y": 943.008594232604
       },
       {
@@ -2645,8 +2645,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2112.5537007948451,
-        "Y": 1004.2224972627164
+        "X": 2125.0429531265318,
+        "Y": 1024.3974433369797
       },
       {
         "ShowGeometry": true,
@@ -2655,8 +2655,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2511.5537007948451,
-        "Y": 1085.2224972627164
+        "X": 2649.8961881612222,
+        "Y": 1091.9474792874707
       },
       {
         "ShowGeometry": true,
@@ -2665,8 +2665,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1315.2463549451604,
-        "Y": 551.77118255385517
+        "X": 1239.0744690502752,
+        "Y": 1582.7488009450963
       },
       {
         "ShowGeometry": true,
@@ -2675,8 +2675,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2511.5537007948451,
-        "Y": 923.22249726271639
+        "X": 2653.7390350325104,
+        "Y": 935.71174959440316
       }
     ],
     "Annotations": [
@@ -3017,9 +3017,9 @@
           "0a05ba303a864bf5ad88010ae019a91b",
           "d7391f6a3b984f6aa98b2a2f27d6f775"
         ],
-        "Left": -498.430649687189,
+        "Left": -499.8194681937216,
         "Top": 598.83852657550665,
-        "Width": 527.0,
+        "Width": 528.38881850653263,
         "Height": 495.17006765709743,
         "FontSize": 36.0,
         "InitialTop": 651.83852657550665,
@@ -3040,10 +3040,10 @@
           "00e6bef32e8f4c9683513f0c3c588b86",
           "9e25063dab8848df8925c9c67e7b7efd"
         ],
-        "Left": 2102.5537007948451,
+        "Left": 2113.1215296908877,
         "Top": 789.22249726271639,
-        "Width": 916.0,
-        "Height": 441.0,
+        "Width": 1146.5708122772958,
+        "Height": 447.72498202475435,
         "FontSize": 36.0,
         "InitialTop": 842.22249726271639,
         "InitialHeight": 318.08429521470839,
@@ -3341,7 +3341,7 @@
       },
       {
         "Id": "bf9c1dd4bc924427a0205acd74656453",
-        "Title": "Break link to force update.\r\n1. Set value to True\r\n2. Set value to False",
+        "Title": "Break link to force update.\r\n1. Set value to False\r\n2. Set value to True (again)",
         "Nodes": [],
         "Left": -488.430649687189,
         "Top": 875.008594232604,
@@ -3357,7 +3357,7 @@
         "Id": "4ea34b8dfa2344caa6cd0b6e0b37abcf",
         "Title": "Determine if Revit should read or write to the helper file.",
         "Nodes": [],
-        "Left": 2112.5537007948451,
+        "Left": 2123.1215296908877,
         "Top": 842.22249726271639,
         "Width": 0.0,
         "Height": 0.0,
@@ -3371,7 +3371,7 @@
         "Id": "a65e137b075f480f994c84ef6d13f494",
         "Title": "If True, Revit reads the value and assigns the new value to the selected Family Type Paramter",
         "Nodes": [],
-        "Left": 2112.5537007948451,
+        "Left": 2123.1215296908877,
         "Top": 896.22249726271639,
         "Width": 0.0,
         "Height": 0.0,
@@ -3385,7 +3385,7 @@
         "Id": "7e2cec2f0b38451784fc6c3f6c7ea3b0",
         "Title": "If False, Revit writes the current Family Type Paramter value to the Helper FIle.",
         "Nodes": [],
-        "Left": 2112.5537007948451,
+        "Left": 2123.1215296908877,
         "Top": 950.22249726271639,
         "Width": 0.0,
         "Height": 0.0,
@@ -3396,8 +3396,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 873.56277769427936,
-    "Y": 294.85749782229971,
-    "Zoom": 0.1459198435126409
+    "X": 1755.4208724061828,
+    "Y": 73.395585599658773,
+    "Zoom": 0.28149538913691324
   }
 }
