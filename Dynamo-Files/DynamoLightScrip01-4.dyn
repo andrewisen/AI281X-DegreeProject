@@ -1765,6 +1765,192 @@
       ],
       "Replication": "Disabled",
       "Description": "Conditional statement"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "C:\\_DegreeProject-Spring19-AndreWisen\\_GitHub\\AI281X-DegreeProject\\status.txt",
+      "Id": "2e544be1c9de4feea52eafdc3a7927f9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e9968a63d8494c0f9406e22ce6b5be51",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.WriteText@string,string",
+      "Id": "ac322a72dcba45aea5c00c4eaee209d9",
+      "Inputs": [
+        {
+          "Id": "96d3d605f3924a36861b352e7f93de09",
+          "Name": "filePath",
+          "Description": "Path to write to\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c386b070f06c49bd8183b720de9e4da4",
+          "Name": "text",
+          "Description": "Text content\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d1cfdbb433d2417298bbc342f9dff859",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Write the text content to a file specified by the path\n\nFileSystem.WriteText (filePath: string, text: string): void"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Logic.If, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "fbf6d1dae05540d78098c8e1ebdb569b",
+      "Inputs": [
+        {
+          "Id": "71628f9f195c4f30bd37282fc29a1b43",
+          "Name": "test",
+          "Description": "Test block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "310b9f89e6284d6c8f48139e0fa447fd",
+          "Name": "true",
+          "Description": "True block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a1b2edb454b64eb1914df534267d7c57",
+          "Name": "false",
+          "Description": "False block",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a055d9413d9346138cfa0d46b57d274f",
+          "Name": "result",
+          "Description": "result",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Conditional statement"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
+      "Id": "da413e972721449cba84d85ca4a7106b",
+      "Inputs": [
+        {
+          "Id": "5074b5dab4fb43d682bef5fe6a0c1304",
+          "Name": "file",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d2870e54453840989848d0d11074047b",
+          "Name": "str",
+          "Description": "Contents of the text file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "Revit",
+      "Id": "d4aec5e651f44b4880429ad5c59e204f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "33db5b2fe695467d9152d991d58119c1",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "fileStr==\"Revit\";",
+      "Id": "12c00513c8a7408593d9186c4220b9df",
+      "Inputs": [
+        {
+          "Id": "454e84a6316e460fab1a00375dccc02e",
+          "Name": "fileStr",
+          "Description": "fileStr",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3b25ab16ceaa4784b980267f670af941",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
     }
   ],
   "Connectors": [
@@ -2069,6 +2255,11 @@
       "Id": "5525dde126274203853f3c512c0a8737"
     },
     {
+      "Start": "b1232be136194e1f865965d7b78ec59a",
+      "End": "71628f9f195c4f30bd37282fc29a1b43",
+      "Id": "86742c0a5e54450dbcbb4091dda09a31"
+    },
+    {
       "Start": "43eb2a93fb294b898cc059e681a268e7",
       "End": "682220aec452416cb2e5e2458ea85a2f",
       "Id": "ba11457977254386a47d7ccb388024a3"
@@ -2082,6 +2273,31 @@
       "Start": "b97e20e02be2409bb8e13f7b2e706700",
       "End": "6c14b28f738b40d586841c67dad244cd",
       "Id": "2b327c6352b040b1a50ccdd97494681e"
+    },
+    {
+      "Start": "e9968a63d8494c0f9406e22ce6b5be51",
+      "End": "96d3d605f3924a36861b352e7f93de09",
+      "Id": "e4f79405e067417682051e4d90f003c3"
+    },
+    {
+      "Start": "e9968a63d8494c0f9406e22ce6b5be51",
+      "End": "5074b5dab4fb43d682bef5fe6a0c1304",
+      "Id": "36a52690a5b7429092deabf6f03e2f98"
+    },
+    {
+      "Start": "a055d9413d9346138cfa0d46b57d274f",
+      "End": "c386b070f06c49bd8183b720de9e4da4",
+      "Id": "dfd3416f26724a83a3247d7ac695805f"
+    },
+    {
+      "Start": "d2870e54453840989848d0d11074047b",
+      "End": "310b9f89e6284d6c8f48139e0fa447fd",
+      "Id": "b1fd23688c6c4548963a1e7de33c16c1"
+    },
+    {
+      "Start": "33db5b2fe695467d9152d991d58119c1",
+      "End": "a1b2edb454b64eb1914df534267d7c57",
+      "Id": "930d9c1271b04028aa6711767d67058f"
     }
   ],
   "Dependencies": [],
@@ -2645,8 +2861,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2125.0429531265318,
-        "Y": 1024.3974433369797
+        "X": 2122.8461385681576,
+        "Y": 1011.2165559867365
       },
       {
         "ShowGeometry": true,
@@ -2677,6 +2893,66 @@
         "Excluded": false,
         "X": 2653.7390350325104,
         "Y": 935.71174959440316
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "2e544be1c9de4feea52eafdc3a7927f9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3596.6066277135119,
+        "Y": 1379.9938932363868
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.WriteText",
+        "Id": "ac322a72dcba45aea5c00c4eaee209d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4223.4696828458091,
+        "Y": 1036.8303014166036
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "If",
+        "Id": "fbf6d1dae05540d78098c8e1ebdb569b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3981.9253583080495,
+        "Y": 1038.4674072476621
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.ReadText",
+        "Id": "da413e972721449cba84d85ca4a7106b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 4098.6495283275344,
+        "Y": 1391.8998521367685
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "d4aec5e651f44b4880429ad5c59e204f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3801.8715813616332,
+        "Y": 1109.16817037546
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "12c00513c8a7408593d9186c4220b9df",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1022.5616120695774,
+        "Y": 1430.3769075515665
       }
     ],
     "Annotations": [
@@ -2765,7 +3041,7 @@
         "Height": 365.14101433197084,
         "FontSize": 36.0,
         "InitialTop": 3565.4273398604237,
-        "InitialHeight": 389.14101433197038,
+        "InitialHeight": 389.14101433197084,
         "TextblockHeight": 43.0,
         "Background": "#FFFF7BAC"
       },
@@ -2816,7 +3092,7 @@
         "Height": 146.0,
         "FontSize": 36.0,
         "InitialTop": 487.53254023796273,
-        "InitialHeight": 170.26174238328406,
+        "InitialHeight": 146.96328080135152,
         "TextblockHeight": 43.0,
         "Background": "#FFA4E1FF"
       },
@@ -2888,7 +3164,7 @@
         "Height": 406.19058629380356,
         "FontSize": 36.0,
         "InitialTop": 1255.4656097269885,
-        "InitialHeight": 419.99999999999977,
+        "InitialHeight": 405.19058629380356,
         "TextblockHeight": 43.0,
         "Background": "#FFA4E1FF"
       },
@@ -2939,7 +3215,7 @@
         "Height": 272.50241731798315,
         "FontSize": 36.0,
         "InitialTop": 1258.3156455916896,
-        "InitialHeight": 271.50241731798303,
+        "InitialHeight": 271.50241731798315,
         "TextblockHeight": 43.0,
         "Background": "#FFA4E1FF"
       },
@@ -2984,7 +3260,7 @@
         "Height": 373.62402021175876,
         "FontSize": 36.0,
         "InitialTop": 1059.3917074608844,
-        "InitialHeight": 346.62402021175865,
+        "InitialHeight": 346.62402021175876,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -3012,10 +3288,10 @@
           "074ac00962b54eef8e23fd98ffe66bc9",
           "acdee8ec01074abe97990a0997bafedc",
           "14371ccf32144bbdbe5f6349b1ca5bff",
+          "d7391f6a3b984f6aa98b2a2f27d6f775",
           "bf9c1dd4bc924427a0205acd74656453",
           "0bee4688ee8948bb97e34e5181e9006e",
-          "0a05ba303a864bf5ad88010ae019a91b",
-          "d7391f6a3b984f6aa98b2a2f27d6f775"
+          "0a05ba303a864bf5ad88010ae019a91b"
         ],
         "Left": -499.8194681937216,
         "Top": 598.83852657550665,
@@ -3023,7 +3299,7 @@
         "Height": 495.17006765709743,
         "FontSize": 36.0,
         "InitialTop": 651.83852657550665,
-        "InitialHeight": 297.0,
+        "InitialHeight": 519.17006765709743,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -3033,20 +3309,20 @@
         "Nodes": [
           "8db0f56497964d42910440296d0466ec",
           "184b792ed88e4c2ab4182e5ec8073116",
-          "4ea34b8dfa2344caa6cd0b6e0b37abcf",
-          "7e2cec2f0b38451784fc6c3f6c7ea3b0",
-          "a65e137b075f480f994c84ef6d13f494",
           "0bdd1babd75042dcb74a7474de8fd35a",
           "00e6bef32e8f4c9683513f0c3c588b86",
-          "9e25063dab8848df8925c9c67e7b7efd"
+          "9e25063dab8848df8925c9c67e7b7efd",
+          "4ea34b8dfa2344caa6cd0b6e0b37abcf",
+          "7e2cec2f0b38451784fc6c3f6c7ea3b0",
+          "a65e137b075f480f994c84ef6d13f494"
         ],
-        "Left": 2113.1215296908877,
+        "Left": 2112.8461385681576,
         "Top": 789.22249726271639,
-        "Width": 1146.5708122772958,
+        "Width": 1146.8462034000258,
         "Height": 447.72498202475435,
         "FontSize": 36.0,
         "InitialTop": 842.22249726271639,
-        "InitialHeight": 318.08429521470839,
+        "InitialHeight": 394.72498202475435,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -3069,9 +3345,29 @@
         "Height": 683.49850229093727,
         "FontSize": 36.0,
         "InitialTop": 3560.4083970801962,
-        "InitialHeight": 565.66334269149,
+        "InitialHeight": 707.49850229093727,
         "TextblockHeight": 43.0,
         "Background": "#FFFF7BAC"
+      },
+      {
+        "Id": "fd1998fbd79e44469e6bbe117bbb6d67",
+        "Title": "DEV\r\n",
+        "Nodes": [
+          "2e544be1c9de4feea52eafdc3a7927f9",
+          "ac322a72dcba45aea5c00c4eaee209d9",
+          "fbf6d1dae05540d78098c8e1ebdb569b",
+          "da413e972721449cba84d85ca4a7106b",
+          "d4aec5e651f44b4880429ad5c59e204f"
+        ],
+        "Left": 3586.6066277135119,
+        "Top": 940.83030141660356,
+        "Width": 837.86305513229718,
+        "Height": 544.0695507201649,
+        "FontSize": 36.0,
+        "InitialTop": 1036.8303014166036,
+        "InitialHeight": 590.7706095319802,
+        "TextblockHeight": 86.0,
+        "Background": "#FFFFAA45"
       },
       {
         "Id": "a8160c3c48614c509682dab355ac80db",
@@ -3396,8 +3692,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 1755.4208724061828,
-    "Y": 73.395585599658773,
-    "Zoom": 0.28149538913691324
+    "X": 776.41694949619068,
+    "Y": -46.837567210464272,
+    "Zoom": 0.17533107501300327
   }
 }
