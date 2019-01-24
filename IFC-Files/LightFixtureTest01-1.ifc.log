@@ -1,0 +1,27 @@
+
+
+/******************************************************************************************
+* WriteStepFile diagnostics.
+* Date:                           Wed Jan 23 18:10:26 2019 
+* Produced by:                    The EXPRESS Data Manager Version 5.02.0100.07 : 28 Aug 2013
+* Module:                         EDMstepFileFactory/EDMstandAlone
+* Host:                           KTH-10775
+* Database:                       C:\Users\LOCAL_~1\AppData\Local\Temp\{C9CBE651-55DD-42DD-BF8C-1BF577BDEB71}\ifc
+* Database version:               5507
+* Database creation date:         Wed Jan 23 18:10:21 2019
+* Model:                          DataRepository.ifc
+* Model creation date:            Wed Jan 23 18:10:21 2019
+* Header model:                   DataRepository.ifc_HeaderModel
+* Header model creation date:     Wed Jan 23 18:10:21 2019
+* Step file:                      LightFixtureTest01-1.ifc
+* EDMuser:                        sdai-user
+* EDMgroup:                       sdai-group
+* License ID and type:            5605 : Permanent license. Expiry date: 
+* EDMstepFileFactory options:     020000
+******************************************************************************************/
+
+
+------------------------------------------------------------------------------------------------
+Operation terminated successfully.
+------------------------------------------------------------------------------------------------
+
