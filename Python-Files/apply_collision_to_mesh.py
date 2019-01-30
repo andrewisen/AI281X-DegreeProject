@@ -1,6 +1,14 @@
 import unreal
 import csv
 
+def GetCSV(csvPath):
+	file = open(csvPath, "r")
+	csvReader = csv.reader(file)
+	csvList = list(csvReader)
+	file.close()
+
+	return csvList
+
 def main():
 	''' SET PATHS '''
 
@@ -15,8 +23,11 @@ def main():
 	# Relative Path to 
 	csvRelPath = ""
 
+	csvList = GetCSV(csvAbsPath)
 
-	print("main")
+
+	for i in csvList:
+		print(i)
 
 if __name__ == '__main__':
 	main()
