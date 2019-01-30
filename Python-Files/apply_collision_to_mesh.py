@@ -24,7 +24,13 @@ def FilterAssets(csvList,assets):
 	filteredAssets = []
 	
 	for idName in csvList:
-		idName = idName[0].replace(" ","_")
+		# Compare Revit assets with imported Unreal Assets
+		# Maybe add funcitons for the last letters in Swedish
+
+		idName = idName[0]
+		idName = idName.replace(" ","_")
+		idName = idName.replace(".","_")
+
 		temporaryFinding = unreal.EditorFilterLibrary.by_id_name(assets, idName)
 		if len(temporaryFinding) != 0:
 			filteredAssets.append(temporaryFinding)
@@ -54,6 +60,7 @@ def main():
 
 	''' FILTER DATA '''
 	filteredAssets = FilterAssets(csvList,assets)
+	
 	for i in filteredAssets:
 		print(i)
 
