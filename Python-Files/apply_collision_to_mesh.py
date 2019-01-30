@@ -9,6 +9,17 @@ def GetCSV(csvPath):
 
 	return csvList
 
+def LoadAssets(assetPath):
+	# Based on: 
+	# https://docs.unrealengine.com/en-us/Editor/Scripting-and-Automating-the-Editor/Editor-Scripting-How-Tos/Setting-up-Collision-Properties-in-Blueprints-and-Python
+
+	# Get a list of all Assets in the path.
+	listOfAssets = unreal.EditorAssetLibrary.list_assets(assetPath)
+	# Load them ll into memory.
+	assets = [unreal.EditorAssetLibrary.load_asset(eachAsset) for eachAsset in listOfAssets]
+
+	return assets
+
 def main():
 	''' SET PATHS '''
 
@@ -23,10 +34,13 @@ def main():
 	# Relative Path to 
 	csvRelPath = ""
 
+	''' GET DATA '''
+	# Get refrence items
 	csvList = GetCSV(csvAbsPath)
+	# Get all items
+	assets = LoadAssets(assetPath)
 
-
-	for i in csvList:
+	for i in assets:
 		print(i)
 
 if __name__ == '__main__':
