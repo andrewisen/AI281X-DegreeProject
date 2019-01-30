@@ -20,6 +20,17 @@ def LoadAssets(assetPath):
 
 	return assets
 
+def FilterAssets(csvList,assets):
+	filteredAssets = []
+	
+	for idName in csvList:
+		idName = idName[0].replace(" ","_")
+		temporaryFinding = unreal.EditorFilterLibrary.by_id_name(assets, idName)
+		if len(temporaryFinding) != 0:
+			filteredAssets.append(temporaryFinding)
+
+	return filteredAssets
+
 def main():
 	''' SET PATHS '''
 
@@ -40,7 +51,10 @@ def main():
 	# Get all items
 	assets = LoadAssets(assetPath)
 
-	for i in assets:
+
+	''' FILTER DATA '''
+	filteredAssets = FilterAssets(csvList,assets)
+	for i in filteredAssets:
 		print(i)
 
 if __name__ == '__main__':
