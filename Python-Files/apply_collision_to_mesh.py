@@ -37,6 +37,14 @@ def FilterAssets(csvList,assets):
 
 	return filteredAssets
 
+def AddBoxCollision(staticMesh):
+	# N.B You could instead use: 
+	#.SPHERE, .CAPSULE, N.DOP10_X, .NDOP10_Y, .NDOP10_Z, .NDOP18, .NDOP26
+	shapeType = unreal.ScriptingCollisionShapeType.BOX
+	
+	unreal.EditorStaticMeshLibrary.add_simple_collisions(staticMesh, shapeType)
+	unreal.EditorAssetLibrary.save_loaded_asset(staticMesh)
+
 def main():
 	''' SET PATHS '''
 
@@ -61,8 +69,9 @@ def main():
 	''' FILTER DATA '''
 	filteredAssets = FilterAssets(csvList,assets)
 	
-	for i in filteredAssets:
-		print(i)
+	''' ADD COLLISION '''
+	for eachAsset in filteredAssets:
+		map(AddBoxCollision, eachAsset)
 
 if __name__ == '__main__':
 	main()
