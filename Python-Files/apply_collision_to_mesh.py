@@ -51,7 +51,7 @@ def main():
 	### Unreal Assets Path
 	# N.b. Content should be replaced with "Game".
 	# Defualt: asset_path = "/Game/Revit/"
-	assetPath = "/Game/Revit/190130_RevitCollisionScene_01/"
+	assetPath = "/Game/Revit/"
 
 	### CSV Path
 	# Absolute Path 
