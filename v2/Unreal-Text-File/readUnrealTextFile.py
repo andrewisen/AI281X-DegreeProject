@@ -17,8 +17,11 @@ def readLines():
 	return lines
 
 def getObjects(lines):
-	beginObjectPhrase = "Begin Object"
-	endObjectPhrase = "End Object"
+	#beginObjectPhrase = "Begin Object"
+	#endObjectPhrase = "End Object"
+
+	beginObjectPhrase = "Begin Actor"
+	endObjectPhrase = "End Actor"
 
 	status = "end"
 	objects = []
@@ -44,9 +47,31 @@ def getObjects(lines):
 
 	return objects
 
+def getSpecificObjects(objects):
+	specificObjects = []
+	'''
+	tags = [
+			"0600x1200mm_4_Lamp__-_277V",
+			"0600x1200mm_4_Lamp__-_277V",
+			]
+	'''
+	tags = ["Revit.Instance.Id.362263"]
+
+	for tag in tags:
+		for currentObject in objects:
+			if not any(tag in x for x in currentObject):
+				continue
+			specificObjects.append(currentObject)
+
+	return specificObjects
+
+def getMetadata(specificObjects):
+
 def main():
 	lines = readLines()
 	objects = getObjects(lines)
+	specificObjects = getSpecificObjects(objects)
+	getMetadata(specificObjects)
 
 if __name__== "__main__":
 	main()
