@@ -20,11 +20,11 @@ def getObjects(lines):
 	beginObjectPhrase = "Begin Object"
 	endObjectPhrase = "End Object"
 
-	status = ""
+	status = "end"
 	objects = []
 	currentObject = []
 
-	for line in lines:
+	for line in lines:	
 		if beginObjectPhrase in line: 
 			status = "begin"
 			pass
@@ -32,21 +32,21 @@ def getObjects(lines):
 			status = "end"
 			objects.append(currentObject)
 			currentObject = []
+			continue
+		elif status == "begin":
 			pass
-		else:
-			if status == "end":
-				continue
-			else:
-				pass
-		
-		currentObject.append(line)
+		elif status == "end":
+			continue
+		try:
+			currentObject.append(line)
+		except:
+			print("Error: Can't append object")
 
-	for i in objects:
-		print(i)
+	return objects
 
 def main():
 	lines = readLines()
-	getObjects(lines)
+	objects = getObjects(lines)
 
 if __name__== "__main__":
 	main()
