@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import numpy as np
 import ast
+import re
 
 def readLines():
 	# NB. Be aware of realtive or absolute path
@@ -71,23 +71,34 @@ def getSpecificObjects(objects):
 
 def getMetaData(specificObjects):
 	metaDataString ="MetaData="
-	metaData = []
+	
+	metaData = {}
+	key = ""
+	value = ""
+
+	regExString = 'ComponentTags...="Revit.Instance.Id'
 
 	for currentObject in specificObjects:
 		for line in currentObject:
-			if not metaDataString in line:
-				continue
+			regEx = re.search(regExString, line)
 
+			if (regEx):
+				key = line
+				continue
+			elif not metaDataString in line:
+				continue
+			
 			line = line.replace("(", "[").replace(")", "]")
 			idx = line.find(metaDataString)
 			line = line[idx + len(metaDataString):]
 
 			line = ast.literal_eval(line)
-			metaData.append(line)
+			value = line
 
-	# TODO: Make dict - key should be instance id
+		idx = key.find("=")
+		key = key[idx + 2:][:-1]
+		metaData[key] = value
 	return metaData
-
 
 def main():
 	lines = readLines()
@@ -95,8 +106,7 @@ def main():
 	specificObjects = getSpecificObjects(objects)
 	metaData = getMetaData(specificObjects)
 
-	for i in metaData:
-		print(i)
+	print(metaData)
 
 if __name__== "__main__":
 	main()
