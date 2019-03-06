@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import numpy as np
+import ast
 
 def readLines():
 	# NB. Be aware of realtive or absolute path
@@ -49,12 +51,14 @@ def getObjects(lines):
 
 def getSpecificObjects(objects):
 	specificObjects = []
+	
 	'''
 	tags = [
 			"0600x1200mm_4_Lamp__-_277V",
 			"0600x1200mm_4_Lamp__-_277V",
 			]
 	'''
+
 	tags = ["Revit.Instance.Id.362263"]
 
 	for tag in tags:
@@ -65,13 +69,34 @@ def getSpecificObjects(objects):
 
 	return specificObjects
 
-def getMetadata(specificObjects):
+def getMetaData(specificObjects):
+	metaDataString ="MetaData="
+	metaData = []
+
+	for currentObject in specificObjects:
+		for line in currentObject:
+			if not metaDataString in line:
+				continue
+
+			line = line.replace("(", "[").replace(")", "]")
+			idx = line.find(metaDataString)
+			line = line[idx + len(metaDataString):]
+
+			line = ast.literal_eval(line)
+			metaData.append(line)
+
+	# TODO: Make dict - key should be instance id
+	return metaData
+
 
 def main():
 	lines = readLines()
 	objects = getObjects(lines)
 	specificObjects = getSpecificObjects(objects)
-	getMetadata(specificObjects)
+	metaData = getMetaData(specificObjects)
+
+	for i in metaData:
+		print(i)
 
 if __name__== "__main__":
 	main()
