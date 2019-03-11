@@ -70,14 +70,9 @@ def getObjects(lines):
 	return objects
 
 def getSpecificObjects(objects):
-	#specificObjects = {}
+
 	specificObjects = []
-	'''
-	tags = [
-			"0600x1200mm_4_Lamp__-_277V",
-			"0600x1200mm_4_Lamp__-_277V",
-			]
-	'''
+	
 
 	tags = ["Revit.Instance.Id.362263"] # DEV
 	regExString = 'ComponentTags...="Revit.Instance.Id'
@@ -152,13 +147,12 @@ def getRotation(specificObjects):
 		print("Error: Can't ger rotation")
 	return rotation
 
-def mergeData(*instaceData):
+def exportData(specificObjects):
 
-	for instance in instaceData:
-
-		print(instance)
-		exit()
-
+	
+	with open("data.txt", "w") as file:
+		for currentObject in specificObjects:
+			json.dump(currentObject.__dict__,file)
 
 def main():
 	lines = readLines()
@@ -167,7 +161,7 @@ def main():
 	getMetaData(specificObjects)
 	getLocation(specificObjects)
 	getRotation(specificObjects)
-
+	exportData(specificObjects)
 
 if __name__== "__main__":
 	main()
