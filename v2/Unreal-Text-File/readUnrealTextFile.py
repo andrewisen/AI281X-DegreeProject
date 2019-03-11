@@ -2,6 +2,24 @@
 # -*- coding: utf-8 -*-
 import ast
 import re
+import json
+
+class RevitObject:
+	def __init__(self,instanceID):
+		self._ID = instanceID
+		self._metaData = []
+		self._location = []
+		self._rotation = []
+
+	def setMetaData(instanceMetaData):
+		self._metaData = instanceMetaData
+
+	def setLocation(instanceLocation):
+		self._location = instanceMetaData
+	
+	def setRotation(instanceRotation):
+		self._rotation = instanceMetaData
+
 
 def readLines():
 	# NB. Be aware of realtive or absolute path
@@ -50,7 +68,8 @@ def getObjects(lines):
 	return objects
 
 def getSpecificObjects(objects):
-	specificObjects = {}
+	#specificObjects = {}
+	specificObjects = []
 	'''
 	tags = [
 			"0600x1200mm_4_Lamp__-_277V",
@@ -69,10 +88,13 @@ def getSpecificObjects(objects):
 				for line in currentObject:
 					regEx = re.search(regExString, line)
 					if (regEx):
-						InstanceID = line
-				idx = InstanceID.find("=")
-				InstanceID = InstanceID[idx + 2:][:-1]
-				specificObjects[InstanceID] = currentObject
+						instanceID = line
+				idx = instanceID.find("=")
+				instanceID = instanceID[idx + 2:][:-1]
+				
+				_ = RevitObject(instanceID)
+				specificObjects.append(_)
+				#specificObjects[instanceID] = currentObject
 				# E.g. {'Revit.Instance.Id.362263': ["..."],'Revit.Instance.Id.365463': ["..."]}
 	except:
 		print("Error: Can't get specific objects")
@@ -131,13 +153,25 @@ def getRotation(specificObjects):
 		print("Error: Can't ger rotation")
 	return rotation
 
+def mergeData(*instaceData):
+
+	for instance in instaceData:
+
+		print(instance)
+		exit()
+
+
 def main():
 	lines = readLines()
 	objects = getObjects(lines)
 	specificObjects = getSpecificObjects(objects)
+
 	metaData = getMetaData(specificObjects)
 	location = getLocation(specificObjects)
 	rotation = getRotation(specificObjects)
+
+	
+
 
 if __name__== "__main__":
 	main()
