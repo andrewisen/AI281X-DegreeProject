@@ -73,8 +73,8 @@ def getMetaData(specificObjects):
 	metaDataString ="MetaData="
 	
 	metaData = {}
-	key = ""
-	value = ""
+	InstanceID = ""
+	InstanceMetaData = ""
 
 	regExString = 'ComponentTags...="Revit.Instance.Id'
 
@@ -83,7 +83,7 @@ def getMetaData(specificObjects):
 			regEx = re.search(regExString, line)
 
 			if (regEx):
-				key = line
+				InstanceID = line
 				continue
 			elif not metaDataString in line:
 				continue
@@ -93,20 +93,30 @@ def getMetaData(specificObjects):
 			line = line[idx + len(metaDataString):]
 
 			line = ast.literal_eval(line)
-			value = line
+			InstanceMetaData = line
 
-		idx = key.find("=")
-		key = key[idx + 2:][:-1]
-		metaData[key] = value
+		idx = InstanceID.find("=")
+		InstanceID = InstanceID[idx + 2:][:-1]
+		metaData[InstanceID] = InstanceMetaData
 	return metaData
 
+def getLocationAndRotation(specificObjects):
+	location = {}
+	rotation = {}
+
+	for currentObject in specificObjects:
+		for line in currentObject:
+			print(line)
+
+
+	return location, rotation
 def main():
 	lines = readLines()
 	objects = getObjects(lines)
 	specificObjects = getSpecificObjects(objects)
 	metaData = getMetaData(specificObjects)
-
-	print(metaData)
+	location, rotation = getLocationAndRotation(specificObjects)
+	
 
 if __name__== "__main__":
 	main()
