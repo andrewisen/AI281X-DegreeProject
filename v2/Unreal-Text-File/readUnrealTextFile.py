@@ -5,7 +5,8 @@ import re
 
 def readLines():
 	# NB. Be aware of realtive or absolute path
-	file = "data.t3d" 
+	#file = "data.t3d" 
+	file = "data_rotate.t3d" # DEV
 	
 	try:
 		fileObject = open(file,encoding='utf-16')
@@ -59,8 +60,8 @@ def getSpecificObjects(objects):
 			]
 	'''
 
-	tags = ["Revit.Instance.Id.362263"]
-
+	tags = ["Revit.Instance.Id.362263"] # DEV
+ 
 	for tag in tags:
 		for currentObject in objects:
 			if not any(tag in x for x in currentObject):
@@ -100,23 +101,42 @@ def getMetaData(specificObjects):
 		metaData[InstanceID] = InstanceMetaData
 	return metaData
 
-def getLocationAndRotation(specificObjects):
+def getLocation(specificObjects):
+	locationString = "RelativeLocation=("
+
 	location = {}
-	rotation = {}
+	instanceLocation = []
+	InstanceID = ""
+
+	
+	regExString = 'ComponentTags...="Revit.Instance.Id'
 
 	for currentObject in specificObjects:
 		for line in currentObject:
-			print(line)
+			regEx = re.search(regExString, line)
 
+			if (regEx):
+				InstanceID = line
+				continue
+			elif not locationString in line:
+				continue
+			
+			idx = line.find("(")
+			instanceLocation = line[idx:][1:-1].split(",")
+			# E.g. ['X=19.890371', 'Y=150.939270', 'Z=218.699997']
+	
+		idx = InstanceID.find("=")
+		InstanceID = InstanceID[idx + 2:][:-1]
+		location[InstanceID] = instanceLocation
 
-	return location, rotation
+	return location
+
 def main():
 	lines = readLines()
 	objects = getObjects(lines)
 	specificObjects = getSpecificObjects(objects)
 	metaData = getMetaData(specificObjects)
-	location, rotation = getLocationAndRotation(specificObjects)
+	location = getLocation(specificObjects)
 	
-
 if __name__== "__main__":
 	main()
