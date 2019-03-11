@@ -5,30 +5,32 @@ import re
 import json
 
 class RevitObject:
-	def __init__(self,instanceID):
+	def __init__(self,instanceID,instanceObject):
 		self._ID = instanceID
+		self._object = instanceObject
+		# Create empty lists, incase missing
 		self._metaData = []
 		self._location = []
 		self._rotation = []
 
-	def setMetaData(instanceMetaData):
+	def setMetaData(self,instanceMetaData):
 		self._metaData = instanceMetaData
 
-	def setLocation(instanceLocation):
-		self._location = instanceMetaData
+	def setLocation(self,instanceLocation):
+		self._location = instanceLocation
 	
-	def setRotation(instanceRotation):
-		self._rotation = instanceMetaData
+	def setRotation(self,instanceRotation):
+		self._rotation = instanceRotation
 
 
 def readLines():
 	# NB. Be aware of realtive or absolute path
-	# file = "data.t3d" 
+	#file = "data.t3d" 
 	file = "data_rotate.t3d" # DEV
 	
 	try:
 		fileObject = open(file,encoding='utf-16')
-	except:
+	except Exception as e:
 		print("Error: File not loaded")
 		return
 
@@ -63,7 +65,7 @@ def getObjects(lines):
 			continue
 		try:
 			currentObject.append(line)
-		except:
+		except Exception as e:
 			print("Error: Can't append object")
 	return objects
 
@@ -91,22 +93,18 @@ def getSpecificObjects(objects):
 						instanceID = line
 				idx = instanceID.find("=")
 				instanceID = instanceID[idx + 2:][:-1]
-				
-				_ = RevitObject(instanceID)
-				specificObjects.append(_)
-				#specificObjects[instanceID] = currentObject
-				# E.g. {'Revit.Instance.Id.362263': ["..."],'Revit.Instance.Id.365463': ["..."]}
-	except:
+				_ = RevitObject(instanceID,currentObject)
+				specificObjects.append(_)				
+	except Exception as e:
 		print("Error: Can't get specific objects")
 	return specificObjects
 
 def getMetaData(specificObjects):
 	metaDataString ="MetaData="
-	metaData = {}
 
 	try:
-		for instanceID, currentObject in specificObjects.items():
-			for line in currentObject:
+		for currentObject in specificObjects:
+			for line in currentObject._object:
 				if not metaDataString in line:
 					continue	
 				line = line.replace("(", "[").replace(")", "]")
@@ -114,25 +112,26 @@ def getMetaData(specificObjects):
 				line = line[idx + len(metaDataString):]
 				line = ast.literal_eval(line)
 				instanceMetaData = line
-			metaData[instanceID] = instanceMetaData
-	except:
+				currentObject.setMetaData(instanceMetaData)
+	except Exception as e:
 		print("Error: Can't get MetaData" )
-	return metaData
+	return
 
 def getLocation(specificObjects):
 	locationString = "RelativeLocation=("
 	location = {}
 
 	try:
-		for instanceID, currentObject in specificObjects.items():
-			for line in currentObject:
+		for currentObject in specificObjects:
+			for line in currentObject._object:
 				if not locationString in line:
 					continue
 				idx = line.find("(")
 				instanceLocation = line[idx:][1:-1].split(",")
 				# E.g. ['X=19.890371', 'Y=150.939270', 'Z=218.699997']
-			location[instanceID] = instanceLocation
-	except:
+				currentObject.setLocation(instanceLocation)
+	except Exception as e:
+		print(e)
 		print("Error: Can't get location")
 	return location
 
@@ -141,15 +140,15 @@ def getRotation(specificObjects):
 	rotation = {}
 
 	try:
-		for instanceID, currentObject in specificObjects.items():
-			for line in currentObject:
+		for currentObject in specificObjects:
+			for line in currentObject._object:
 				if not rotationString in line:
 					continue
 				idx = line.find("(")
 				instanceRotation = line[idx:][1:-1].split(",")
 				# E.g. ['Pitch=0.000000', 'Yaw=89.999992', 'Roll=0.000000']
-			rotation[instanceID] = instanceRotation
-	except:
+				currentObject.setRotation(instanceRotation)
+	except Exception as e:
 		print("Error: Can't ger rotation")
 	return rotation
 
@@ -165,12 +164,9 @@ def main():
 	lines = readLines()
 	objects = getObjects(lines)
 	specificObjects = getSpecificObjects(objects)
-
-	metaData = getMetaData(specificObjects)
-	location = getLocation(specificObjects)
-	rotation = getRotation(specificObjects)
-
-	
+	getMetaData(specificObjects)
+	getLocation(specificObjects)
+	getRotation(specificObjects)
 
 
 if __name__== "__main__":
