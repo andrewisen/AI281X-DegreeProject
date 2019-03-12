@@ -82,7 +82,13 @@ def getSpecificObjects(objects):
 	instanceID = ""
 
 	tags = ["Revit.Instance.Id.362263"] # DEV
+	#tags = []
+
+
 	regExString = 'ComponentTags...="Revit.Instance.Id'
+
+	if not tags:
+		return objects
 
 	try:
 		for tag in tags:
@@ -165,7 +171,7 @@ def exportData(specificObjects):
 	for _ in range(len(specificObjects)):
 		tempStr = json.dumps(specificObjects[_],default=specificObjects[_].serialize)
 		tempStr = json.loads(tempStr)
-		tempDict["RevitObject" + str(_)] = tempStr
+		tempDict["RevitObject_" + str(_)] = tempStr
 
 	with open("data.txt", "w") as file:
 		json.dump(tempDict,file)
