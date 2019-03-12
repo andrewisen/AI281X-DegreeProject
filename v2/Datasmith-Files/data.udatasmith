@@ -1,0 +1,737 @@
+<DatasmithUnrealScene>
+	<Version>0.21</Version>
+	<SDKVersion>4.21E3</SDKVersion>
+	<Host>Revit</Host>
+	<Application Vendor="Autodesk Inc." ProductName="Revit" ProductVersion="2019"/>
+	<User ID="cd44233d481e53d612f895bb1d2c91e0" OS="Windows 10"/>
+	<StaticMesh name="M5d2ab40cd92e303846fdaba21726a5a3" label="Exterior_-_EIFS_on_Mtl_Stud">
+		<file path="190306_ExportTest01_Assets/M5d2ab40cd92e303846fdaba21726a5a3.udsmesh"/>
+		<Size a="547352.0" x="30.199997" y="430.199982" z="400.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="e58fd9ee9b8d8939cea56994db8adb91"/>
+		<Material id="20536" name="Se1d02d77c49b92106aa587b47397b05f"/>
+		<Material id="20530" name="S929054bcc15a6c2df4267b87010fdf48"/>
+		<Material id="19104" name="S9b299e1da2cbb85ee01f17c90ef04471"/>
+	</StaticMesh>
+	<StaticMesh name="Me52f5a371c45e01d983898bf9ca36581" label="Exterior_-_EIFS_on_Mtl_Stud">
+		<file path="190306_ExportTest01_Assets/Me52f5a371c45e01d983898bf9ca36581.udsmesh"/>
+		<Size a="312329.28125" x="300.0" y="30.200001" z="400.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="c0311fb1f6f121a1ac16702ac08d5c5a"/>
+		<Material id="20536" name="Se1d02d77c49b92106aa587b47397b05f"/>
+		<Material id="20530" name="S929054bcc15a6c2df4267b87010fdf48"/>
+		<Material id="19104" name="S9b299e1da2cbb85ee01f17c90ef04471"/>
+	</StaticMesh>
+	<StaticMesh name="M68bbfddd06faf2b8c2432b268e15f452" label="Exterior_-_EIFS_on_Mtl_Stud">
+		<file path="190306_ExportTest01_Assets/M68bbfddd06faf2b8c2432b268e15f452.udsmesh"/>
+		<Size a="562729.5" x="30.200005" y="399.999969" z="400.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="a5b31ab20825c56f8ae0ac70d5fe4a76"/>
+		<Material id="20536" name="Se1d02d77c49b92106aa587b47397b05f"/>
+		<Material id="20530" name="S929054bcc15a6c2df4267b87010fdf48"/>
+		<Material id="19104" name="S9b299e1da2cbb85ee01f17c90ef04471"/>
+	</StaticMesh>
+	<StaticMesh name="Mc2682d6a3c462d5caaa4420ce4c25805" label="Exterior_-_EIFS_on_Mtl_Stud">
+		<file path="190306_ExportTest01_Assets/Mc2682d6a3c462d5caaa4420ce4c25805.udsmesh"/>
+		<Size a="323609.3125" x="269.799988" y="30.199982" z="400.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="069098d1eeb5f47f623083a52effa0db"/>
+		<Material id="20536" name="Se1d02d77c49b92106aa587b47397b05f"/>
+		<Material id="20530" name="S929054bcc15a6c2df4267b87010fdf48"/>
+		<Material id="19104" name="S9b299e1da2cbb85ee01f17c90ef04471"/>
+	</StaticMesh>
+	<StaticMesh name="Mc6170b4abf947451410ee23971564f06" label="0915_x_2134mm">
+		<file path="190306_ExportTest01_Assets/Mc6170b4abf947451410ee23971564f06.udsmesh"/>
+		<Size a="94004.390625" x="106.699997" y="35.199997" z="221.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="bc8c1aa6b17430e4bd736e641ef92313"/>
+		<Material id="34157" name="S1f96bef04a81c3227a16d29c0513b429"/>
+		<Material id="34158" name="S37aad625607f2250d00a3e82728ef878"/>
+	</StaticMesh>
+	<StaticMesh name="M61fd01f2356db5cb395dbdecfdca3e0a" label="1400_x_1800mm">
+		<file path="190306_ExportTest01_Assets/M61fd01f2356db5cb395dbdecfdca3e0a.udsmesh"/>
+		<Size a="148612.8125" x="140.0" y="32.105" z="180.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="ad14a0bf5d1644f19ee63fb8b28d11ab"/>
+		<Material id="344149" name="Sb11c812ddfc40d0f652babb4cdcaf389"/>
+		<Material id="344150" name="S31743815a8565a26b6ddccbcc24ecfd9"/>
+		<Material id="19105" name="Sbe5e3e822a8ea26b97dd6a3997211e71"/>
+	</StaticMesh>
+	<StaticMesh name="M2a77ad835a1cab6ba3226774c67a5865" label="with_Sill">
+		<file path="190306_ExportTest01_Assets/M2a77ad835a1cab6ba3226774c67a5865.udsmesh"/>
+		<Size a="4558.538574" x="154.539993" y="194.043228" z="3.81"/>
+		<LightmapUV value="-1"/>
+		<Hash value="6b93eb1c699b17b5718a7a641568d87b"/>
+		<Material id="344149" name="Sb11c812ddfc40d0f652babb4cdcaf389"/>
+	</StaticMesh>
+	<StaticMesh name="M115c40d0f98b30976fc50eef62c3659f" label="Picture_Frame">
+		<file path="190306_ExportTest01_Assets/M115c40d0f98b30976fc50eef62c3659f.udsmesh"/>
+		<Size a="62633.664063" x="149.460007" y="189.459991" z="3.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="f326a4e07457492169082f281e97e25b"/>
+		<Material id="344150" name="S31743815a8565a26b6ddccbcc24ecfd9"/>
+	</StaticMesh>
+	<StaticMesh name="M89705df3d71e129e13c05242035d12c5" label="Generic_Floor_-_400mm">
+		<file path="190306_ExportTest01_Assets/M89705df3d71e129e13c05242035d12c5.udsmesh"/>
+		<Size a="445109.53125" x="327.799988" y="427.799988" z="40.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="a1d368b02cdd74544e0176f7a6b3a188"/>
+		<Material id="19103" name="Sbf7728376d7f51d877b349cb732cf720"/>
+	</StaticMesh>
+	<StaticMesh name="Maebb1dd60fd4bebd9c6ea0aec0f42c4f" label="600_x_1200mm_grid">
+		<file path="190306_ExportTest01_Assets/Maebb1dd60fd4bebd9c6ea0aec0f42c4f.udsmesh"/>
+		<Size a="286286.75" x="269.799988" y="369.799988" z="5.200012"/>
+		<LightmapUV value="-1"/>
+		<Hash value="72ab747d465350769da6f1744fc07e12"/>
+		<Material id="19101" name="Sc0d5f89355aa674c7a066445a51a360a"/>
+		<Material id="28309" name="Sef8d841c9190c660fbcc85880089060b"/>
+	</StaticMesh>
+	<StaticMesh name="Ma23fa4aaf7a742839ca143a819c9a3cc" label="0600x1200mm_4_Lamp__-_277V">
+		<file path="190306_ExportTest01_Assets/Ma23fa4aaf7a742839ca143a819c9a3cc.udsmesh"/>
+		<Size a="40874.84375" x="120.0" y="59.999996" z="13.970001"/>
+		<LightmapUV value="-1"/>
+		<Hash value="cce5bcd3a798e23fa4eebf68ab5a752e"/>
+		<Material id="360054" name="Sb248deccbc0b904c3b2b0cc2c7f93585"/>
+		<Material id="33405" name="Seba73baa900746f80179dd880c19ac43"/>
+	</StaticMesh>
+	<StaticMesh name="M144504bd616a3758c3bbe9eb39bd0ac7" label="Generic_Roof_-_300mm">
+		<file path="190306_ExportTest01_Assets/M144504bd616a3758c3bbe9eb39bd0ac7.udsmesh"/>
+		<Size a="397461.8125" x="330.200012" y="430.199982" z="129.961548"/>
+		<LightmapUV value="-1"/>
+		<Hash value="266c5340acec75179f14557da66938cf"/>
+		<Material id="19103" name="Sbf7728376d7f51d877b349cb732cf720"/>
+	</StaticMesh>
+	<StaticMesh name="M3110af57d9489bf0819c688f77e52f77" label="M_Level_Head_-_Circle">
+		<file path="190306_ExportTest01_Assets/M3110af57d9489bf0819c688f77e52f77.udsmesh"/>
+		<Size a="0.17821" x="0.8" y="0.8" z="0.0"/>
+		<LightmapUV value="-1"/>
+		<Hash value="2b3c6d36b7d74f9980f532820a220b14"/>
+		<Material id="0" name="Sfallback_7f7f7f0032"/>
+	</StaticMesh>
+	<Camera name="C_362354" label="Object_3D_" layer="Views">
+		<Transform tx="-1756.452393" ty="-1676.915649" tz="1917.900635" sx="1.0" sy="1.0" sz="1.0" qx="-0.115917" qy="0.279848" qz="0.364705" qw="0.880476" qhex="D665EDBD41488F3EA3BABA3EE466613F"/>
+		<SensorWidth value="36.0"/>
+		<SensorAspectRatio value="1.48051"/>
+		<DepthOfField enabled="1"/>
+		<FocusDistance value="1000.0"/>
+		<FStop value="5.6"/>
+		<FocalLength value="35.0"/>
+		<Post>
+		</Post>
+	</Camera>
+	<Actor name="A_13071" label="Level_1" layer="Levels">
+		<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+		<tag value="Revit.Instance.Depth.1" />
+		<tag value="Revit.Instance.Id.13071" />
+		<children visible="true"  selector="false" selection="-1">
+			<ActorMesh name="A_46083_23207399" label="M_Level_Head_-_Circle" layer="Level_Heads">
+				<mesh name="M3110af57d9489bf0819c688f77e52f77"/>
+				<Transform tx="1785.465942" ty="-1447.251709" tz="0.0" sx="100.0" sy="100.0" sz="100.0" qx="0.5" qy="0.5" qz="0.5" qw="0.5" qhex="0000003F0000003F0000003FFEFFFF3E"/>
+				<tag value="Revit.Instance.Depth.2" />
+				<tag value="Revit.Instance.Id.46083" />
+			</ActorMesh>
+			<ActorMesh name="A_359777" label="Exterior_-_EIFS_on_Mtl_Stud" layer="Walls">
+				<mesh name="M5d2ab40cd92e303846fdaba21726a5a3"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.359777" />
+			</ActorMesh>
+			<ActorMesh name="A_359803" label="Exterior_-_EIFS_on_Mtl_Stud" layer="Walls">
+				<mesh name="Me52f5a371c45e01d983898bf9ca36581"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.359803" />
+				<children visible="true"  selector="false" selection="-1">
+					<ActorMesh name="A_360010_31209982" label="0915_x_2134mm" layer="Doors">
+						<mesh name="Mc6170b4abf947451410ee23971564f06"/>
+						<Transform tx="21.760721" ty="-55.007324" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="-1.0" qw="-0.0" qhex="0000000000000080FEFF7FBF000000B4"/>
+						<tag value="Revit.Instance.Depth.2" />
+						<tag value="Revit.Instance.Id.360010" />
+						<tag value="Revit.Host.Id.359803" />
+					</ActorMesh>
+				</children>
+			</ActorMesh>
+			<ActorMesh name="A_359839" label="Exterior_-_EIFS_on_Mtl_Stud" layer="Walls">
+				<mesh name="M68bbfddd06faf2b8c2432b268e15f452"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.359839" />
+			</ActorMesh>
+			<ActorMesh name="A_359859" label="Exterior_-_EIFS_on_Mtl_Stud" layer="Walls">
+				<mesh name="Mc2682d6a3c462d5caaa4420ce4c25805"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.359859" />
+				<children visible="true"  selector="false" selection="-1">
+					<ActorMesh name="A_360005_12454385" label="1400_x_1800mm" layer="Windows">
+						<mesh name="M61fd01f2356db5cb395dbdecfdca3e0a"/>
+						<Transform tx="31.760721" ty="344.992645" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="00000000000000801D16EA260000803F"/>
+						<tag value="Revit.Instance.Depth.2" />
+						<tag value="Revit.Instance.Id.360005" />
+						<tag value="Revit.Host.Id.359859" />
+					</ActorMesh>
+				</children>
+			</ActorMesh>
+			<ActorMesh name="A_359963_19550106" label="with_Sill" layer="Generic_Models">
+				<mesh name="M2a77ad835a1cab6ba3226774c67a5865"/>
+				<Transform tx="31.760721" ty="360.092651" tz="270.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="-0.707107" qz="-0.707107" qw="-0.0" qhex="2A86A526F30435BFF30435BF000000B4"/>
+				<tag value="Revit.Instance.Depth.2" />
+				<tag value="Revit.Instance.Id.359963" />
+			</ActorMesh>
+			<ActorMesh name="A_359964_41733227" label="Picture_Frame" layer="Generic_Models">
+				<mesh name="M115c40d0f98b30976fc50eef62c3659f"/>
+				<Transform tx="31.760721" ty="329.89267" tz="270.0" sx="1.0" sy="1.0" sz="1.0" qx="0.707107" qy="0.0" qz="0.0" qw="0.707107" qhex="F204353F2A86A5262A86A526F204353F"/>
+				<tag value="Revit.Instance.Depth.2" />
+				<tag value="Revit.Instance.Id.359964" />
+			</ActorMesh>
+			<ActorMesh name="A_359979" label="Generic_Floor_-_400mm" layer="Floors">
+				<mesh name="M89705df3d71e129e13c05242035d12c5"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.359979" />
+			</ActorMesh>
+			<ActorMesh name="A_360043" label="600_x_1200mm_grid" layer="Ceilings">
+				<mesh name="Maebb1dd60fd4bebd9c6ea0aec0f42c4f"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.360043" />
+				<children visible="true"  selector="false" selection="-1">
+					<ActorMesh name="A_362263_40054726" label="0600x1200mm_4_Lamp__-_277V" layer="Lighting_Fixtures">
+						<mesh name="Ma23fa4aaf7a742839ca143a819c9a3cc"/>
+						<Transform tx="19.890371" ty="150.93927" tz="18.699999" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+						<tag value="Revit.Instance.Depth.2" />
+						<tag value="Revit.Instance.Id.362263" />
+						<tag value="Revit.Host.Id.360043" />
+						<children visible="true"  selector="false" selection="-1">
+							<Light name="L_362263_24948221" type="AreaLight" enabled="1" label="0600x1200mm_4_Lamp__-_277V" layer="Lighting_Fixtures">
+								<Transform tx="21.760721" ty="144.992676" tz="262.539978" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+								<Color usetemp="1" temperature="4230.0" R="1.0" G="1.0" B="1.0"/>
+								<Intensity value="160.0"/>
+								<IntensityUnits value="Candelas"/>
+								<InnerConeAngle value="45.0"/>
+								<OuterConeAngle value="60.0"/>
+								<Shape type="Cylinder" visible="1" width="55.0" length="115.0" Distribution="spot"/>
+							</Light>
+						</children>
+					</ActorMesh>
+				</children>
+			</ActorMesh>
+		</children>
+	</Actor>
+	<Actor name="A_15913" label="Level_2" layer="Levels">
+		<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+		<tag value="Revit.Instance.Depth.1" />
+		<tag value="Revit.Instance.Id.15913" />
+		<children visible="true"  selector="false" selection="-1">
+			<ActorMesh name="A_46083_7540007" label="M_Level_Head_-_Circle" layer="Level_Heads">
+				<mesh name="M3110af57d9489bf0819c688f77e52f77"/>
+				<Transform tx="1785.465942" ty="-1447.251709" tz="400.0" sx="100.0" sy="100.0" sz="100.0" qx="-0.5" qy="-0.5" qz="-0.5" qw="-0.5" qhex="000000BF000000BF000000BFFEFFFFBE"/>
+				<tag value="Revit.Instance.Depth.2" />
+				<tag value="Revit.Instance.Id.46083" />
+			</ActorMesh>
+			<ActorMesh name="A_362375" label="Generic_Roof_-_300mm" layer="Roofs">
+				<mesh name="M144504bd616a3758c3bbe9eb39bd0ac7"/>
+				<Transform tx="0.0" ty="0.0" tz="0.0" sx="1.0" sy="1.0" sz="1.0" qx="0.0" qy="0.0" qz="0.0" qw="1.0" qhex="0000000000000000000000000000803F"/>
+				<tag value="Revit.Instance.Depth.1" />
+				<tag value="Revit.Instance.Id.362375" />
+			</ActorMesh>
+		</children>
+	</Actor>
+	<Texture name="ba1703604c7015796860d2f7338bf793_0" texturemode="0" rgbcurve="-1.000000" file="190306_ExportTest01_Assets/finishes.gypsum board.painted.white.jpg">
+		<Hash value="c83569abef00e4a337cc6dced43ca637"/>
+	</Texture>
+	<Texture name="f0e83d61cc56e5b84e3362c4b5986eee_0" texturemode="0" rgbcurve="-1.000000" file="190306_ExportTest01_Assets/finishes.gypsum board.painted.white.bump.jpg">
+		<Hash value="f0bc3daeeffe9af342ff374f784ec980"/>
+	</Texture>
+	<Texture name="a57c126751b41bdc36d89e18197ca850_0" texturemode="0" rgbcurve="-1.000000" file="190306_ExportTest01_Assets/woods & plastics.finish carpentry.wood.red birch.png">
+		<Hash value="499b18254f7e1f8f349034338a031fee"/>
+	</Texture>
+	<Texture name="a31161697eed0b93eefa59ea2180cf4b_0" texturemode="0" rgbcurve="-1.000000" file="190306_ExportTest01_Assets/woods & plastics.finish carpentry.wood.red birch.png">
+		<Hash value="499b18254f7e1f8f349034338a031fee"/>
+	</Texture>
+	<Texture name="0bdafe8b3c4d134bf9f8d9ac39c2ceb5_0" texturemode="0" rgbcurve="-1.000000" file="190306_ExportTest01_Assets/finishes.ceilings.acoustical tile.exposed grid.2x4.fissured.white.jpg">
+		<Hash value="f1efe9ba3107bd277a7e801e58625f8a"/>
+	</Texture>
+	<MasterMaterial name="Se1d02d77c49b92106aa587b47397b05f"  label="Gypsum_Wall_Board" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.894118,G=0.894118,B=0.894118,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="1.000000"/>
+		<KeyValueProperty name="DiffuseMap" type="Texture" val="ba1703604c7015796860d2f7338bf793_0"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetX" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetY" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleX" type="Float" val="0.635000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleY" type="Float" val="-0.635000"/>
+		<KeyValueProperty name="DiffuseMap_UVWAngle" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="SelfIlluminationFilter" type="Color" val="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationMapEnable" type="Bool" val="False"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.100000"/>
+		<KeyValueProperty name="BumpMap" type="Texture" val="f0e83d61cc56e5b84e3362c4b5986eee_0"/>
+		<KeyValueProperty name="BumpMap_UVOffsetX" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpMap_UVOffsetY" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpMap_UVScaleX" type="Float" val="0.635000"/>
+		<KeyValueProperty name="BumpMap_UVScaleY" type="Float" val="-0.635000"/>
+		<KeyValueProperty name="BumpMap_UVWAngle" type="Float" val="0.000000"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="S929054bcc15a6c2df4267b87010fdf48"  label="EIFS__Exterior_Insulation" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.407843,G=0.407843,B=0.407843,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.400000"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="S9b299e1da2cbb85ee01f17c90ef04471"  label="Default_Wall" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="SelfIlluminationFilter" type="Color" val="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationMapEnable" type="Bool" val="False"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.500000"/>
+	</MasterMaterial>
+	<MasterMaterial name="S1f96bef04a81c3227a16d29c0513b429"  label="Door_-_Frame" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.600000,G=0.298039,B=0.168627,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.400000"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="S37aad625607f2250d00a3e82728ef878"  label="Door_-_Panel" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.823529,G=0.623529,B=0.372549,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="1.000000"/>
+		<KeyValueProperty name="DiffuseMap" type="Texture" val="a57c126751b41bdc36d89e18197ca850_0"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetX" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetY" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleX" type="Float" val="1.200000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleY" type="Float" val="-1.200000"/>
+		<KeyValueProperty name="DiffuseMap_UVWAngle" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.050000"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sb11c812ddfc40d0f652babb4cdcaf389"  label="Clad_-_White" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.949020,G=0.949020,B=0.933333,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.400000"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="S31743815a8565a26b6ddccbcc24ecfd9"  label="Wood_-_Stained" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.890196,G=0.666667,B=0.501961,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="1.000000"/>
+		<KeyValueProperty name="DiffuseMap" type="Texture" val="a31161697eed0b93eefa59ea2180cf4b_0"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetX" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetY" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleX" type="Float" val="0.100000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleY" type="Float" val="-0.100000"/>
+		<KeyValueProperty name="DiffuseMap_UVWAngle" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.050000"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sbe5e3e822a8ea26b97dd6a3997211e71"  label="Glass" Type="2" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.000000,G=0.501961,B=0.752941,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="Transparency" type="Float" val="0.850000"/>
+		<KeyValueProperty name="TransparencyMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="RefractionIndex" type="Float" val="1.010000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sbf7728376d7f51d877b349cb732cf720"  label="Default_Roof" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="SelfIlluminationFilter" type="Color" val="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationMapEnable" type="Bool" val="False"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.500000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sc0d5f89355aa674c7a066445a51a360a"  label="Default" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="SelfIlluminationFilter" type="Color" val="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationMapEnable" type="Bool" val="False"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.500000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sef8d841c9190c660fbcc85880089060b"  label="Ceiling_Tile_600_x_1200" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.894118,G=0.894118,B=0.890196,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="1.000000"/>
+		<KeyValueProperty name="DiffuseMap" type="Texture" val="0bdafe8b3c4d134bf9f8d9ac39c2ceb5_0"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetX" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVOffsetY" type="Float" val="0.000000"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleX" type="Float" val="0.062500"/>
+		<KeyValueProperty name="DiffuseMap_UVScaleY" type="Float" val="-0.062500"/>
+		<KeyValueProperty name="DiffuseMap_UVWAngle" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="SelfIlluminationFilter" type="Color" val="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationMapEnable" type="Bool" val="False"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sb248deccbc0b904c3b2b0cc2c7f93585"  label="Glass__White__High_Luminance" Type="2" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.909804,G=0.909804,B=0.909804,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="2500.000000"/>
+		<KeyValueProperty name="SelfIlluminationFilter" type="Color" val="(R=1.000000,G=1.000000,B=1.000000,A=1.000000)"/>
+		<KeyValueProperty name="SelfIlluminationMapEnable" type="Bool" val="False"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="Transparency" type="Float" val="0.950000"/>
+		<KeyValueProperty name="TransparencyMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="RefractionIndex" type="Float" val="1.520000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Seba73baa900746f80179dd880c19ac43"  label="Steel__Chrome_Plated" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.066667,G=0.066667,B=0.066667,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="TintColor" type="Color" val="(R=0.313726,G=0.313726,B=0.313726,A=1.000000)"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="True"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="1.000000"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+	</MasterMaterial>
+	<MasterMaterial name="Sfallback_7f7f7f0032"  label="Fallback_Material" Type="1" Quality="0" >
+		<KeyValueProperty name="DiffuseColor" type="Color" val="(R=0.498039,G=0.498039,B=0.498039,A=1.000000)"/>
+		<KeyValueProperty name="DiffuseMapFading" type="Float" val="0.000000"/>
+		<KeyValueProperty name="TintEnabled" type="Bool" val="False"/>
+		<KeyValueProperty name="SelfIlluminationLuminance" type="Float" val="0.000000"/>
+		<KeyValueProperty name="BumpAmount" type="Float" val="0.000000"/>
+		<KeyValueProperty name="IsMetal" type="Bool" val="False"/>
+		<KeyValueProperty name="Glossiness" type="Float" val="0.500000"/>
+	</MasterMaterial>
+	<MetaData name="A_13071" reference="Actor.A_13071">
+		<KeyValueProperty name="Name" type="String" val="Level 1"/>
+		<KeyValueProperty name="Elevation" type="String" val="0"/>
+		<KeyValueProperty name="Computation_Height" type="String" val="0"/>
+		<KeyValueProperty name="Scope_Box" type="String" val="None"/>
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Building_Story" type="String" val="Yes"/>
+		<KeyValueProperty name="Story_Above" type="String" val="Default"/>
+		<KeyValueProperty name="Line_Weight" type="String" val="1"/>
+		<KeyValueProperty name="Color" type="String" val="0"/>
+		<KeyValueProperty name="Line_Pattern" type="String" val="Center"/>
+		<KeyValueProperty name="Elevation_Base" type="String" val="Project Base Point"/>
+		<KeyValueProperty name="Symbol" type="String" val="M_Level Head - Circle"/>
+		<KeyValueProperty name="Symbol_at_End_1_Default" type="String" val="No"/>
+		<KeyValueProperty name="Symbol_at_End_2_Default" type="String" val="Yes"/>
+	</MetaData>
+	<MetaData name="A_46083_23207399" reference="Actor.A_46083_23207399">
+		<KeyValueProperty name="Name" type="String" val="Level 1"/>
+		<KeyValueProperty name="Elevation" type="String" val="0"/>
+		<KeyValueProperty name="Computation_Height" type="String" val="0"/>
+		<KeyValueProperty name="Scope_Box" type="String" val="None"/>
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Building_Story" type="String" val="Yes"/>
+		<KeyValueProperty name="Story_Above" type="String" val="Default"/>
+		<KeyValueProperty name="Line_Weight" type="String" val="1"/>
+		<KeyValueProperty name="Color" type="String" val="0"/>
+		<KeyValueProperty name="Line_Pattern" type="String" val="Center"/>
+		<KeyValueProperty name="Elevation_Base" type="String" val="Project Base Point"/>
+		<KeyValueProperty name="Symbol" type="String" val="M_Level Head - Circle"/>
+		<KeyValueProperty name="Symbol_at_End_1_Default" type="String" val="No"/>
+		<KeyValueProperty name="Symbol_at_End_2_Default" type="String" val="Yes"/>
+	</MetaData>
+	<MetaData name="A_359777" reference="Actor.A_359777">
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Location_Line" type="String" val="Wall Centerline"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Base_Constraint" type="String" val="Level 1"/>
+		<KeyValueProperty name="Base_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Top_Constraint" type="String" val="Up to level: Level 2"/>
+		<KeyValueProperty name="Top_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="Crosshatch"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Wrapping_at_Inserts" type="String" val="Do not wrap"/>
+		<KeyValueProperty name="Wrapping_at_Ends" type="String" val="None"/>
+		<KeyValueProperty name="Function" type="String" val="Exterior"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_359803" reference="Actor.A_359803">
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Location_Line" type="String" val="Wall Centerline"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Base_Constraint" type="String" val="Level 1"/>
+		<KeyValueProperty name="Base_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Top_Constraint" type="String" val="Up to level: Level 2"/>
+		<KeyValueProperty name="Top_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="Crosshatch"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Wrapping_at_Inserts" type="String" val="Do not wrap"/>
+		<KeyValueProperty name="Wrapping_at_Ends" type="String" val="None"/>
+		<KeyValueProperty name="Function" type="String" val="Exterior"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_360010_31209982" reference="Actor.A_360010_31209982">
+		<KeyValueProperty name="Level" type="String" val="Level 1"/>
+		<KeyValueProperty name="Sill_Height" type="String" val="0"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Mark" type="String" val="1"/>
+		<KeyValueProperty name="Head_Height" type="String" val="213"/>
+		<KeyValueProperty name="Analytic_Construction" type="String" val="Metal"/>
+		<KeyValueProperty name="Door_Material" type="String" val="Door - Panel"/>
+		<KeyValueProperty name="Frame_Material" type="String" val="Door - Frame"/>
+		<KeyValueProperty name="Function" type="String" val="Interior"/>
+		<KeyValueProperty name="Wall_Closure" type="String" val="By host"/>
+		<KeyValueProperty name="Thickness" type="String" val="5"/>
+		<KeyValueProperty name="Height" type="String" val="213"/>
+		<KeyValueProperty name="Trim_Projection_Ext" type="String" val="3"/>
+		<KeyValueProperty name="Trim_Projection_Int" type="String" val="3"/>
+		<KeyValueProperty name="Trim_Width" type="String" val="8"/>
+		<KeyValueProperty name="Width" type="String" val="92"/>
+		<KeyValueProperty name="Type_Mark" type="String" val="15"/>
+	</MetaData>
+	<MetaData name="A_359839" reference="Actor.A_359839">
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Location_Line" type="String" val="Wall Centerline"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Base_Constraint" type="String" val="Level 1"/>
+		<KeyValueProperty name="Base_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Top_Constraint" type="String" val="Up to level: Level 2"/>
+		<KeyValueProperty name="Top_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="Crosshatch"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Wrapping_at_Inserts" type="String" val="Do not wrap"/>
+		<KeyValueProperty name="Wrapping_at_Ends" type="String" val="None"/>
+		<KeyValueProperty name="Function" type="String" val="Exterior"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_359859" reference="Actor.A_359859">
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Location_Line" type="String" val="Wall Centerline"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Base_Constraint" type="String" val="Level 1"/>
+		<KeyValueProperty name="Base_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Top_Constraint" type="String" val="Up to level: Level 2"/>
+		<KeyValueProperty name="Top_Offset" type="String" val="0"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="Crosshatch"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Wrapping_at_Inserts" type="String" val="Do not wrap"/>
+		<KeyValueProperty name="Wrapping_at_Ends" type="String" val="None"/>
+		<KeyValueProperty name="Function" type="String" val="Exterior"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_360005_12454385" reference="Actor.A_360005_12454385">
+		<KeyValueProperty name="Level" type="String" val="Level 1"/>
+		<KeyValueProperty name="Sill_Height" type="String" val="90"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Exterior_Trim_Visibility" type="String" val="Yes"/>
+		<KeyValueProperty name="Interior_Trim_Visibility" type="String" val="Yes"/>
+		<KeyValueProperty name="Window_Inset" type="String" val="0"/>
+		<KeyValueProperty name="Exterior_Wall_Closure" type="String" val="3"/>
+		<KeyValueProperty name="Interior_Wall_Closure" type="String" val="5"/>
+		<KeyValueProperty name="Mark" type="String" val="6"/>
+		<KeyValueProperty name="Head_Height" type="String" val="270"/>
+		<KeyValueProperty name="Analytic_Construction" type="String" val="&lt;None&gt;"/>
+		<KeyValueProperty name="Exterior_Frame_Material" type="String" val="Clad - White"/>
+		<KeyValueProperty name="Interior_Frame_Material" type="String" val="Wood - Stained"/>
+		<KeyValueProperty name="Exterior_Trim_Material" type="String" val="Clad - White"/>
+		<KeyValueProperty name="Interior_Trim_Material" type="String" val="Wood - Stained"/>
+		<KeyValueProperty name="Glass_Panel_Material" type="String" val="Glass"/>
+		<KeyValueProperty name="Muntin_Visibility" type="String" val="Yes"/>
+		<KeyValueProperty name="Wall_Closure" type="String" val="By host"/>
+		<KeyValueProperty name="Muntin_Pattern" type="String" val="M_Muntin Pattern_2x2"/>
+		<KeyValueProperty name="Exterior_Trim" type="String" val="M_Trim-Window-Exterior-Flat : with Sill"/>
+		<KeyValueProperty name="Interior_Trim" type="String" val="M_Trim-Window-Interior-Flat : Picture Frame"/>
+		<KeyValueProperty name="Width" type="String" val="140"/>
+		<KeyValueProperty name="Height" type="String" val="180"/>
+		<KeyValueProperty name="Rough_Width" type="String" val="142"/>
+		<KeyValueProperty name="Rough_Height" type="String" val="182"/>
+		<KeyValueProperty name="Assembly_Code" type="String" val="B2020100"/>
+		<KeyValueProperty name="Fire_Rating" type="String" val="0.5h"/>
+		<KeyValueProperty name="Type_Mark" type="String" val="22"/>
+		<KeyValueProperty name="Default_Sill_Height" type="String" val="90"/>
+		<KeyValueProperty name="Half_Width" type="String" val="70"/>
+	</MetaData>
+	<MetaData name="A_359963_19550106" reference="Actor.A_359963_19550106">
+		<KeyValueProperty name="Default_Elevation" type="String" val="120"/>
+		<KeyValueProperty name="Picture_Frame" type="String" val="No"/>
+		<KeyValueProperty name="Sill" type="String" val="Yes"/>
+		<KeyValueProperty name="Trim_Width" type="String" val="6"/>
+		<KeyValueProperty name="Trim_Thickness_Picture_Frame" type="String" val="3"/>
+		<KeyValueProperty name="Trim_Thickness_with_Sill" type="String" val="2"/>
+		<KeyValueProperty name="Sill_Thickness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_359964_41733227" reference="Actor.A_359964_41733227">
+		<KeyValueProperty name="Default_Elevation" type="String" val="120"/>
+		<KeyValueProperty name="Picture_Frame" type="String" val="Yes"/>
+		<KeyValueProperty name="Sill" type="String" val="No"/>
+		<KeyValueProperty name="Trim_Width" type="String" val="6"/>
+		<KeyValueProperty name="Trim_Thickness_Picture_Frame" type="String" val="3"/>
+		<KeyValueProperty name="Trim_Thickness_with_Sill" type="String" val="2"/>
+		<KeyValueProperty name="Sill_Thickness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_359979" reference="Actor.A_359979">
+		<KeyValueProperty name="Level" type="String" val="Level 1"/>
+		<KeyValueProperty name="Height_Offset_From_Level" type="String" val="0"/>
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="-1"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Function" type="String" val="Interior"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_360043" reference="Actor.A_360043">
+		<KeyValueProperty name="Level" type="String" val="Level 1"/>
+		<KeyValueProperty name="Height_Offset_From_Level" type="String" val="260"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="-1"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<MetaData name="A_362263_40054726" reference="Actor.A_362263_40054726">
+		<KeyValueProperty name="Level" type="String" val="Level 1"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Mark" type="String" val="1"/>
+		<KeyValueProperty name="Light_Loss_Factor" type="String" val="0"/>
+		<KeyValueProperty name="Initial_Intensity" type="String" val="0"/>
+		<KeyValueProperty name="Initial_Color" type="String" val="0"/>
+		<KeyValueProperty name="Emit_from_Rectangle_Width" type="String" val="55"/>
+		<KeyValueProperty name="Emit_from_Rectangle_Length" type="String" val="115"/>
+		<KeyValueProperty name="Emit_Shape_Visible_in_Rendering" type="String" val="No"/>
+		<KeyValueProperty name="Dimming_Lamp_Color_Temperature_Shift" type="String" val="&lt;None&gt;"/>
+		<KeyValueProperty name="Color_Filter" type="String" val="16777215"/>
+		<KeyValueProperty name="Load_Classification" type="String" val="Lighting - Dwelling Unit"/>
+		<KeyValueProperty name="Ballast_Voltage" type="String" val="277 V"/>
+		<KeyValueProperty name="Ballast_Number_of_Poles" type="String" val="1"/>
+		<KeyValueProperty name="Lamp" type="String" val="T-12"/>
+		<KeyValueProperty name="Apparent_Load" type="String" val="160 VA"/>
+		<KeyValueProperty name="Diffuser_Material" type="String" val="Glass, White, High Luminance"/>
+		<KeyValueProperty name="Light_Box_Material" type="String" val="Steel, Chrome Plated"/>
+		<KeyValueProperty name="Light_Source_Symbol_Size" type="String" val="61"/>
+		<KeyValueProperty name="Circle_Diameter" type="String" val="36"/>
+		<KeyValueProperty name="Box_Length" type="String" val="120"/>
+		<KeyValueProperty name="Box_Width" type="String" val="60"/>
+		<KeyValueProperty name="Assembly_Code" type="String" val="D5020210"/>
+	</MetaData>
+	<MetaData name="L_362263_24948221" reference="Actor.L_362263_24948221">
+		<KeyValueProperty name="Level" type="String" val="Level 1"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Mark" type="String" val="1"/>
+		<KeyValueProperty name="Light_Loss_Factor" type="String" val="0"/>
+		<KeyValueProperty name="Initial_Intensity" type="String" val="0"/>
+		<KeyValueProperty name="Initial_Color" type="String" val="0"/>
+		<KeyValueProperty name="Emit_from_Rectangle_Width" type="String" val="55"/>
+		<KeyValueProperty name="Emit_from_Rectangle_Length" type="String" val="115"/>
+		<KeyValueProperty name="Emit_Shape_Visible_in_Rendering" type="String" val="No"/>
+		<KeyValueProperty name="Dimming_Lamp_Color_Temperature_Shift" type="String" val="&lt;None&gt;"/>
+		<KeyValueProperty name="Color_Filter" type="String" val="16777215"/>
+		<KeyValueProperty name="Load_Classification" type="String" val="Lighting - Dwelling Unit"/>
+		<KeyValueProperty name="Ballast_Voltage" type="String" val="277 V"/>
+		<KeyValueProperty name="Ballast_Number_of_Poles" type="String" val="1"/>
+		<KeyValueProperty name="Lamp" type="String" val="T-12"/>
+		<KeyValueProperty name="Apparent_Load" type="String" val="160 VA"/>
+		<KeyValueProperty name="Diffuser_Material" type="String" val="Glass, White, High Luminance"/>
+		<KeyValueProperty name="Light_Box_Material" type="String" val="Steel, Chrome Plated"/>
+		<KeyValueProperty name="Light_Source_Symbol_Size" type="String" val="61"/>
+		<KeyValueProperty name="Circle_Diameter" type="String" val="36"/>
+		<KeyValueProperty name="Box_Length" type="String" val="120"/>
+		<KeyValueProperty name="Box_Width" type="String" val="60"/>
+		<KeyValueProperty name="Assembly_Code" type="String" val="D5020210"/>
+	</MetaData>
+	<MetaData name="A_15913" reference="Actor.A_15913">
+		<KeyValueProperty name="Name" type="String" val="Level 2"/>
+		<KeyValueProperty name="Elevation" type="String" val="400"/>
+		<KeyValueProperty name="Computation_Height" type="String" val="0"/>
+		<KeyValueProperty name="Scope_Box" type="String" val="None"/>
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Building_Story" type="String" val="Yes"/>
+		<KeyValueProperty name="Story_Above" type="String" val="Default"/>
+		<KeyValueProperty name="Line_Weight" type="String" val="1"/>
+		<KeyValueProperty name="Color" type="String" val="0"/>
+		<KeyValueProperty name="Line_Pattern" type="String" val="Center"/>
+		<KeyValueProperty name="Elevation_Base" type="String" val="Project Base Point"/>
+		<KeyValueProperty name="Symbol" type="String" val="M_Level Head - Circle"/>
+		<KeyValueProperty name="Symbol_at_End_1_Default" type="String" val="No"/>
+		<KeyValueProperty name="Symbol_at_End_2_Default" type="String" val="Yes"/>
+	</MetaData>
+	<MetaData name="A_46083_7540007" reference="Actor.A_46083_7540007">
+		<KeyValueProperty name="Name" type="String" val="Level 2"/>
+		<KeyValueProperty name="Elevation" type="String" val="400"/>
+		<KeyValueProperty name="Computation_Height" type="String" val="0"/>
+		<KeyValueProperty name="Scope_Box" type="String" val="None"/>
+		<KeyValueProperty name="Structural" type="String" val="No"/>
+		<KeyValueProperty name="Building_Story" type="String" val="Yes"/>
+		<KeyValueProperty name="Story_Above" type="String" val="Default"/>
+		<KeyValueProperty name="Line_Weight" type="String" val="1"/>
+		<KeyValueProperty name="Color" type="String" val="0"/>
+		<KeyValueProperty name="Line_Pattern" type="String" val="Center"/>
+		<KeyValueProperty name="Elevation_Base" type="String" val="Project Base Point"/>
+		<KeyValueProperty name="Symbol" type="String" val="M_Level Head - Circle"/>
+		<KeyValueProperty name="Symbol_at_End_1_Default" type="String" val="No"/>
+		<KeyValueProperty name="Symbol_at_End_2_Default" type="String" val="Yes"/>
+	</MetaData>
+	<MetaData name="A_362375" reference="Actor.A_362375">
+		<KeyValueProperty name="Base_Level" type="String" val="Level 2"/>
+		<KeyValueProperty name="Rafter_Cut" type="String" val="Plumb Cut"/>
+		<KeyValueProperty name="Rafter_or_Truss" type="String" val="Truss"/>
+		<KeyValueProperty name="Phase_Created" type="String" val="New Construction"/>
+		<KeyValueProperty name="Phase_Demolished" type="String" val="None"/>
+		<KeyValueProperty name="Slope" type="String" val="30.00°"/>
+		<KeyValueProperty name="Room_Bounding" type="String" val="Yes"/>
+		<KeyValueProperty name="Base_Offset_From_Level" type="String" val="0"/>
+		<KeyValueProperty name="Cutoff_Level" type="String" val="None"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Pattern" type="String" val="-1"/>
+		<KeyValueProperty name="Coarse_Scale_Fill_Color" type="String" val="0"/>
+		<KeyValueProperty name="Absorptance" type="String" val="0.7"/>
+		<KeyValueProperty name="Roughness" type="String" val="3"/>
+	</MetaData>
+	<Export Duration="0"/>
+</DatasmithUnrealScene>
