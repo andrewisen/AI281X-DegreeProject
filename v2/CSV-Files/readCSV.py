@@ -22,14 +22,30 @@ def readCSV():
 
 	return csvBefore,csvAfter,csvFileBefore,csvFileAfter
 
+def convertToDictionary(csvFile):
+	headers = ["ID","Date","Intensity", "Location","Rotation"]
+	objects = {}
+	metaData = {}
+
+	for line in csvFile:
+		for _ in range(len(headers)):
+			metaData[headers[_]] = line[_]
+		objects[line[0]] = metaData
+	
+	return objects
 
 def main():
 	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
-	for i in csvBefore:
-		print(i)
+
+	csvDictBefore = convertToDictionary(csvBefore)
+	csvDictAfter = convertToDictionary(csvAfter)
+
+	#print(csvDictBefore)
 
 	csvFileBefore.close()
 	csvFileAfter.close()
+
+
 	
 if __name__== "__main__":
 	main()
