@@ -2,30 +2,34 @@
 # -*- coding: utf-8 -*-
 import csv
 def readCSV():
-	fileBefore = "CSV_FileA.csv"
-	fileAfter = "CSV_FileB.csv"
+	fileFilePathBefore = "CSV_FileA.csv"
+	fileFilePathAfter = "CSV_FileB.csv"
 	delimiter = ";"
 	try:
-		csvBefore = open(fileBefore)
+		csvFileBefore = open(fileFilePathBefore)
 	except Exception as e:
-		print("Error: File (before) not loaded")
+		print("Error: File (before) not loaded.")
 		return
 	try:
-		csvAfter = open(fileAfter)
+		csvFileAfter = open(fileFilePathAfter)
 	except Exception as e:
-		print("Error: File (after) not loaded")
+		print("Error: File (after) not loaded.")
 		return
 
-	csvBefore = csv.reader(csvBefore, delimiter=delimiter)
-	csvAfter = csv.reader(csvAfter, delimiter=delimiter)
-	
-	return csvBefore,csvAfter
+	csvBefore = csv.reader(csvFileBefore, delimiter=delimiter)
+	csvAfter = csv.reader(csvFileAfter, delimiter=delimiter)
+
+
+	return csvBefore,csvAfter,csvFileBefore,csvFileAfter
 
 
 def main():
-	csvBefore,csvAfter = readCSV()
+	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
 	for i in csvBefore:
 		print(i)
 
+	csvFileBefore.close()
+	csvFileAfter.close()
+	
 if __name__== "__main__":
 	main()
