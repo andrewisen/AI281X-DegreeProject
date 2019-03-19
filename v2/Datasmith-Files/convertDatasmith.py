@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
-from tabtree import parser
+from itertools import takewhile
+
 
 def readLines():
 	file = "data.udatasmith"
 	
 	try:
-		#fileObject = open(file,encoding='utf-16')
 		fileObject = open(file)
 	except Exception as e:
 		print("Error: File not loaded")
@@ -20,7 +20,7 @@ def readLines():
 
 	return lines
 
-def convert(lines):
+def removeData(lines):
 	matchingLines = [
 		"<Host>",
 		"<Application Vendor=",
@@ -31,10 +31,46 @@ def convert(lines):
 	for matchingLine in matchingLines:
 		for line in lines:
 			if matchingLine in line:
-				lines.remove(line)		
+				lines.remove(line)
+	return lines
+
+def convert(lines):
+	
+	for line in lines:
+		removeSpace = line.split(" ")
+		removeSpace = "".join(removeSpace)
+		#removeTab = removeSpace.split("\t")
+		#removeTab = "".join(removeTab)
+		print(removeTab)
+
+	return 
+
+
+
+def build_tree(lines):
+	is_tab = '\t'.__eq__
+
+
+	lines = iter(lines)
+	stack = []
+	for line in lines:
+		indent = len(list(takewhile(is_tab, line)))
+		stack[indent:] = [line.lstrip()]
+	
+	#for _ in stack:
+	#	print(_)
+
 
 def main():
 	lines = readLines()
-	convert(lines)
+	lines = removeData(lines)
+	
+	lines = "".join(lines)
+	#print(lines,end="")
+
+	#convert(lines)
+	build_tree(lines.split('\n'))
+
+
 if __name__== "__main__":
 	main()
