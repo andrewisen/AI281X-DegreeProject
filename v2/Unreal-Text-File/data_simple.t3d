@@ -1,0 +1,293 @@
+Begin Map Name=/Temp/Untitled_1
+   Begin Level NAME=PersistentLevel
+      Begin Actor Class=/Script/Engine.WorldSettings Name=WorldSettings_1 Archetype=/Script/Engine.WorldSettings'/Script/Engine.Default__WorldSettings'
+         Begin Object Class=/Script/Engine.NavigationSystemConfig Name="NavigationSystemConfig_0"
+         End Object
+         Begin Object Name="NavigationSystemConfig_0"
+            NavigationSystemClass=/Script/NavigationSystem.NavigationSystemV1
+         End Object
+         bEnableNavigationSystem=False
+         NavigationSystemConfig=NavigationSystemConfig'"NavigationSystemConfig_0"'
+         HierarchicalLODSetup(0)=(TransitionScreenSize=0.313790,ProxySetting=(MaterialSettings=(OpacityConstant=0.000000,OpacityMaskConstant=0.000000,SpecularTextureSize=(X=0,Y=60913792)),MergeDistance=4.000000,HardAngleThreshold=80.000000,LandscapeCullingPrecision=High),MergeSetting=(MaterialSettings=(OpacityConstant=0.000000,OpacityMaskConstant=0.000000,SpecularTextureSize=(X=6346880,Y=0))))
+         BookmarkArray(0)=None
+         BookmarkArray(1)=None
+         BookmarkArray(2)=None
+         BookmarkArray(3)=None
+         BookmarkArray(4)=None
+         BookmarkArray(5)=None
+         BookmarkArray(6)=None
+         BookmarkArray(7)=None
+         BookmarkArray(8)=None
+         BookmarkArray(9)=None
+         ActorLabel="WorldSettings1"
+      End Actor
+      Begin Actor Class=/Script/Engine.Brush Name=Brush_1 Archetype=/Script/Engine.Brush'/Script/Engine.Default__Brush'
+         Begin Object Class=/Script/Engine.BrushComponent Name="BrushComponent0" Archetype=BrushComponent'/Script/Engine.Default__Brush:BrushComponent0'
+         End Object
+         Begin Object Class=/Script/UnrealEd.CubeBuilder Name="CubeBuilder_2"
+         End Object
+         Begin Object Name="BrushComponent0"
+            Brush=Model'"Brush"'
+            bSelectable=False
+            RelativeLocation=(X=-90.000000,Y=110.000000,Z=20.000000)
+         End Object
+         Begin Object Name="CubeBuilder_2"
+            Vertices(0)=(X=-1000.000000,Y=-1000.000000,Z=-100.000000)
+            Vertices(1)=(X=-1000.000000,Y=-1000.000000,Z=100.000000)
+            Vertices(2)=(X=-1000.000000,Y=1000.000000,Z=-100.000000)
+            Vertices(3)=(X=-1000.000000,Y=1000.000000,Z=100.000000)
+            Vertices(4)=(X=1000.000000,Y=-1000.000000,Z=-100.000000)
+            Vertices(5)=(X=1000.000000,Y=-1000.000000,Z=100.000000)
+            Vertices(6)=(X=1000.000000,Y=1000.000000,Z=-100.000000)
+            Vertices(7)=(X=1000.000000,Y=1000.000000,Z=100.000000)
+            Polys(0)=(VertexIndices=(0,1,3,2),Direction=1)
+            Polys(1)=(VertexIndices=(2,3,7,6),Direction=1)
+            Polys(2)=(VertexIndices=(6,7,5,4),Direction=1)
+            Polys(3)=(VertexIndices=(4,5,1,0),Direction=1)
+            Polys(4)=(VertexIndices=(3,1,5,7),Direction=1)
+            Polys(5)=(VertexIndices=(0,2,6,4),Direction=1)
+            Layer="Cube"
+         End Object
+         bNotForClientOrServer=True
+         Brush=Model'"Brush"'
+         BrushComponent="BrushComponent0"
+         BrushBuilder=CubeBuilder'"CubeBuilder_2"'
+         bHidden=False
+         bActorEnableCollision=False
+         RootComponent="BrushComponent0"
+         Layers(0)="Cube"
+         ActorLabel="Brush1"
+      End Actor
+      Begin Actor Class=/Script/Engine.DirectionalLight Name=LightSource Archetype=/Script/Engine.DirectionalLight'/Script/Engine.Default__DirectionalLight'
+         Begin Object Class=/Script/Engine.DirectionalLightComponent Name="LightComponent0" Archetype=DirectionalLightComponent'/Script/Engine.Default__DirectionalLight:LightComponent0'
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="ArrowComponent0" Archetype=ArrowComponent'/Script/Engine.Default__DirectionalLight:ArrowComponent0'
+         End Object
+         Begin Object Name="LightComponent0"
+            bUsedAsAtmosphereSunLight=True
+            LightGuid=021210754D15188FDEA497917E307577
+            Intensity=3.141593
+            RelativeLocation=(X=100.000000,Y=-200.000000,Z=570.000000)
+            RelativeRotation=(Pitch=-31.341522,Yaw=36.412563,Roll=-51.273010)
+         End Object
+         Begin Object Name="ArrowComponent0"
+            ArrowColor=(B=255,G=255,R=255,A=255)
+            AttachParent="LightComponent0"
+         End Object
+         ArrowComponent="ArrowComponent0"
+         LightComponent="LightComponent0"
+         RootComponent="LightComponent0"
+         ActorLabel="Light Source"
+      End Actor
+      Begin Actor Class=/Script/Engine.PlayerStart Name=PlayerStart Archetype=/Script/Engine.PlayerStart'/Script/Engine.Default__PlayerStart'
+         Begin Object Class=/Script/Engine.CapsuleComponent Name="CollisionCapsule" Archetype=CapsuleComponent'/Script/Engine.Default__PlayerStart:CollisionCapsule'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__PlayerStart:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite2" Archetype=BillboardComponent'/Script/Engine.Default__PlayerStart:Sprite2'
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype=ArrowComponent'/Script/Engine.Default__PlayerStart:Arrow'
+         End Object
+         Begin Object Name="CollisionCapsule"
+            AreaClass=Class'"/Script/NavigationSystem.NavArea_Obstacle"'
+            RelativeLocation=(X=0.000000,Y=0.000000,Z=112.000687)
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="CollisionCapsule"
+         End Object
+         Begin Object Name="Sprite2"
+            AttachParent="CollisionCapsule"
+         End Object
+         Begin Object Name="Arrow"
+            AttachParent="CollisionCapsule"
+         End Object
+         ArrowComponent="Arrow"
+         CapsuleComponent="CollisionCapsule"
+         GoodSprite="Sprite"
+         BadSprite="Sprite2"
+         RootComponent="CollisionCapsule"
+         ActorLabel="Player Start"
+      End Actor
+      Begin Actor Class=/Script/Engine.AtmosphericFog Name=AtmosphericFog_1 Archetype=/Script/Engine.AtmosphericFog'/Script/Engine.Default__AtmosphericFog'
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__AtmosphericFog:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.AtmosphericFogComponent Name="AtmosphericFogComponent0" Archetype=AtmosphericFogComponent'/Script/Engine.Default__AtmosphericFog:AtmosphericFogComponent0'
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="ArrowComponent0" Archetype=ArrowComponent'/Script/Engine.Default__AtmosphericFog:ArrowComponent0'
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="AtmosphericFogComponent0"
+         End Object
+         Begin Object Name="AtmosphericFogComponent0"
+            RelativeLocation=(X=0.000000,Y=0.000000,Z=600.000000)
+         End Object
+         Begin Object Name="ArrowComponent0"
+            AttachParent="AtmosphericFogComponent0"
+         End Object
+         AtmosphericFogComponent="AtmosphericFogComponent0"
+         ArrowComponent="ArrowComponent0"
+         SpriteComponent="Sprite"
+         RootComponent="AtmosphericFogComponent0"
+         ActorLabel="Atmospheric Fog"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Floor Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/MapTemplates/SM_Template_Map_Floor.SM_Template_Map_Floor"'
+            StreamingTextureData(0)=(PackedRelativeBox=4294901760,TexelFactor=10.013148)
+            StreamingTextureData(1)=(PackedRelativeBox=4294901760,TextureLevelIndex=1,TexelFactor=200.262970)
+            StaticMeshDerivedDataKey="STATICMESH_34081786561B425A9523C94540EA599D_359a029847e84730ba516769d0f19427Simplygon_5_5_2156_18f808c3cf724e5a994f57de5c83cc4b_680318F3495BDBDEBE4C11B39CD497CE000000000100000001000000000000000000803F0000803F00000000000000000000344203030300000000"
+            MaterialStreamingRelativeBoxes(0)=4294901760
+            VisibilityId=0
+            BodyInstance=(bAutoWeld=False)
+            RelativeLocation=(X=0.000000,Y=0.000000,Z=20.000000)
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Floor"
+      End Actor
+      Begin Actor Class=/Engine/EngineSky/BP_Sky_Sphere.BP_Sky_Sphere_C Name=SkySphere Archetype=/Engine/EngineSky/BP_Sky_Sphere.BP_Sky_Sphere_C'/Engine/EngineSky/BP_Sky_Sphere.Default__BP_Sky_Sphere_C'
+         Begin Object Class=/Script/Engine.SceneComponent Name="Base" Archetype=SceneComponent'/Engine/EngineSky/BP_Sky_Sphere.BP_Sky_Sphere_C:SceneComponent_1'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Sky Sphere mesh" Archetype=StaticMeshComponent'/Engine/EngineSky/BP_Sky_Sphere.BP_Sky_Sphere_C:StaticMeshComponent_12'
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="MaterialInstanceDynamic_0"
+            End Object
+         End Object
+         Begin Object Name="Base"
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Sky Sphere mesh"
+            Begin Object Name="MaterialInstanceDynamic_0"
+               Parent=Material'"/Engine/EngineSky/M_Sky_Panning_Clouds2.M_Sky_Panning_Clouds2"'
+               ScalarParameterValues(0)=(ParameterInfo=(Name="Horizon falloff"),ParameterValue=4.392956)
+               ScalarParameterValues(1)=(ParameterInfo=(Name="Cloud speed"),ParameterValue=2.000000)
+               ScalarParameterValues(2)=(ParameterInfo=(Name="Sun brightness"),ParameterValue=75.000000)
+               ScalarParameterValues(3)=(ParameterInfo=(Name="Sun height"))
+               ScalarParameterValues(4)=(ParameterInfo=(Name="Cloud opacity"),ParameterValue=1.000000)
+               ScalarParameterValues(5)=(ParameterInfo=(Name="Stars brightness"),ParameterValue=0.100000)
+               VectorParameterValues(0)=(ParameterInfo=(Name="Light direction"),ParameterValue=(R=0.687334,G=0.506979,B=-0.520138,A=1.000000))
+               VectorParameterValues(1)=(ParameterInfo=(Name="Sun color"),ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000))
+               VectorParameterValues(2)=(ParameterInfo=(Name="Horizon color"),ParameterValue=(R=0.673802,G=0.674747,B=1.000000,A=1.000000))
+               VectorParameterValues(3)=(ParameterInfo=(Name="Zenith color"),ParameterValue=(R=0.034046,G=0.072827,B=0.185044,A=1.000000))
+               VectorParameterValues(4)=(ParameterInfo=(Name="Cloud color"),ParameterValue=(R=0.846601,G=0.761922,B=0.752507,A=1.000000))
+               LightingGuid=3689482C4235D3E214301A8E45E18487
+            End Object
+            StreamingTextureData(0)=(PackedRelativeBox=4294901760,TextureLevelIndex=2,TexelFactor=1427.289063)
+            StreamingTextureData(1)=(PackedRelativeBox=4294901760,TextureLevelIndex=3,TexelFactor=21601.675781)
+            StreamingTextureData(2)=(PackedRelativeBox=4294901760,TextureLevelIndex=4,TexelFactor=10800.837891)
+            MaterialStreamingRelativeBoxes(0)=4294901760
+            OverrideMaterials(0)=MaterialInstanceDynamic'"MaterialInstanceDynamic_0"'
+            VisibilityId=1
+            AttachParent="Base"
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.MeshComponent"',MemberName="OverrideMaterials")
+            CustomProperties 
+         End Object
+         Sky Sphere mesh="Sky Sphere mesh"
+         Base="Base"
+         Sky material=MaterialInstanceDynamic'"Sky Sphere mesh.MaterialInstanceDynamic_0"'
+         Directional light actor=DirectionalLight'"LightSource"'
+         Sun height=0.348239
+         Sun brightness=75.000000
+         Cloud speed=2.000000
+         Cloud opacity=1.000000
+         RootComponent="Base"
+         ActorLabel="Sky Sphere"
+         BlueprintCreatedComponents(0)="Base"
+         BlueprintCreatedComponents(1)="Sky Sphere mesh"
+      End Actor
+      Begin Actor Class=/Script/Engine.SkyLight Name=SkyLight_1 Archetype=/Script/Engine.SkyLight'/Script/Engine.Default__SkyLight'
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__SkyLight:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.SkyLightComponent Name="SkyLightComponent0" Archetype=SkyLightComponent'/Script/Engine.Default__SkyLight:SkyLightComponent0'
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="SkyLightComponent0"
+         End Object
+         Begin Object Name="SkyLightComponent0"
+            LightGuid=6356FE6F4244EE5F686DE28CC11301E1
+            RelativeLocation=(X=20.774353,Y=-30.995270,Z=504.748230)
+            Mobility=Static
+         End Object
+         LightComponent="SkyLightComponent0"
+         SpriteComponent="Sprite"
+         RootComponent="SkyLightComponent0"
+         ActorLabel="SkyLight"
+      End Actor
+      Begin Actor Class=/Script/Engine.SphereReflectionCapture Name=SphereReflectionCapture_1 Archetype=/Script/Engine.SphereReflectionCapture'/Script/Engine.Default__SphereReflectionCapture'
+         Begin Object Class=/Script/Engine.SphereReflectionCaptureComponent Name="NewReflectionComponent" Archetype=SphereReflectionCaptureComponent'/Script/Engine.Default__SphereReflectionCapture:NewReflectionComponent'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__SphereReflectionCapture:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="CaptureOffset" Archetype=BillboardComponent'/Script/Engine.Default__SphereReflectionCapture:CaptureOffset'
+         End Object
+         Begin Object Class=/Script/Engine.DrawSphereComponent Name="DrawRadius0" Archetype=DrawSphereComponent'/Script/Engine.Default__SphereReflectionCapture:DrawRadius0'
+            Begin Object Class=/Script/Engine.BodySetup Name="BodySetup_0" Archetype=BodySetup'/Script/Engine.Default__SphereReflectionCapture:DrawRadius0.BodySetup_0'
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.DrawSphereComponent Name="DrawRadius1" Archetype=DrawSphereComponent'/Script/Engine.Default__SphereReflectionCapture:DrawRadius1'
+         End Object
+         Begin Object Name="NewReflectionComponent"
+            PreviewInfluenceRadius="DrawRadius0"
+            CaptureOffsetComponent="CaptureOffset"
+            MapBuildDataId=EB9CBE3C423008B5E8E130901E171C89
+            RelativeLocation=(X=-10.907654,Y=-9.328659,Z=266.861328)
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="NewReflectionComponent"
+         End Object
+         Begin Object Name="CaptureOffset"
+            AttachParent="NewReflectionComponent"
+         End Object
+         Begin Object Name="DrawRadius0"
+            Begin Object Name="BodySetup_0"
+               AggGeom=(SphereElems=((Radius=3000.000000)))
+            End Object
+            SphereRadius=3000.000000
+            AreaClass=Class'"/Script/NavigationSystem.NavArea_Obstacle"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="NewReflectionComponent"
+         End Object
+         Begin Object Name="DrawRadius1"
+            AreaClass=Class'"/Script/NavigationSystem.NavArea_Obstacle"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="NewReflectionComponent"
+         End Object
+         DrawCaptureRadius="DrawRadius1"
+         CaptureComponent="NewReflectionComponent"
+         SpriteComponent="Sprite"
+         CaptureOffsetComponent="CaptureOffset"
+         RootComponent="NewReflectionComponent"
+         ActorLabel="SphereReflectionCapture"
+      End Actor
+      Begin Actor Class=/Script/NavigationSystem.AbstractNavData Name=AbstractNavData-Default Archetype=/Script/NavigationSystem.AbstractNavData'/Script/NavigationSystem.Default__AbstractNavData'
+         Begin Object Class=/Script/Engine.SceneComponent Name="SceneComp" Archetype=SceneComponent'/Script/NavigationSystem.Default__AbstractNavData:SceneComp'
+         End Object
+         Begin Object Name="SceneComp"
+         End Object
+         NavDataConfig=(NavigationDataClassName=/Script/NavigationSystem.RecastNavMesh)
+         RootComponent="SceneComp"
+         ActorLabel="AbstractNavData-Default"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Cube_2 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cube.Cube"'
+            StaticMeshDerivedDataKey="STATICMESH_3713973CA1B84F41BA1EB2E56FCE9211_228332BAE0224DD294E232B87D83948F1$2e0_26D666F86459324BE77D4F6A1939C66980000000001000000010000000100000001000000010000000000000000000000000000004000000000000000020000000000803F0000803F0000803F0000004000000000050000004E6F6E6500300000803F00000000000000410000000000003442030303000000000"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            RelativeLocation=(X=110.000000,Y=30.000000,Z=80.000000)
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Cube"
+         bIsEditorPreviewActor=True
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
