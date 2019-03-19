@@ -5,26 +5,29 @@ import ast
 def readLines():
 	file = "data.t3d"
 	
-	try:
-		fileObject = open(file,encoding='utf-16')
-	except Exception as e:
-		print("Error: File not loaded")
-		return
 
-	lines = fileObject.read().splitlines()
+	try:
+		encoding='utf-16'
+		fileObject = open(file,encoding=encoding)
+	except Exception as e:
+		#print("Error: File not loaded")
+		pass
+	try:
+		encoding='ascii'
+		fileObject = open(file,encoding=encoding)
+	except Exception as e:
+		#print("Error: File not loaded")
+		pass
+
+
+	lines = fileObject.read()
+	splitlines = fileObject.read().splitlines()
 	fileObject.close()
 
-	return lines
+	return lines,splitlines
 
 def main():
-	lines = readLines()
-	objects = getObjects(lines)
-	specificObjects = getSpecificObjects(objects)
-	getMetaData(specificObjects)
-	getLocation(specificObjects)
-	getRotation(specificObjects)
-	
-	exportData(specificObjects)
+	lines, splitlines = readLines()
 
 if __name__== "__main__":
 	main()
