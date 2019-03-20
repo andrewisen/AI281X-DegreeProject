@@ -39,7 +39,6 @@ def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 	compareHeaders = headers[2:]
 	array = {}
 	objectDelta = {}
-	#print(csvDictBefore)
 
 	if len(csvDictBefore) != len(csvDictAfter):
 		print("Error: Dictionaries not equal lenght.")
@@ -53,25 +52,21 @@ def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 			print("Error: Can't open dictionaries.")
 			return
 		for metaDataHeader in compareHeaders:
-			tempA = metaDataBefore[metaDataHeader]
-			tempB = metaDataAfter[metaDataHeader]
+			tempMetaDataBefore = metaDataBefore[metaDataHeader]
+			tempMetaDataAfter = metaDataAfter[metaDataHeader]
 
-			if tempA == tempB:
+			if tempMetaDataBefore == tempMetaDataAfter:
 				continue
-			metaDataHeader, delta = calculateDifference(tempA,tempB,metaDataHeader,compareHeaders)
+			metaDataHeader, delta = calculateDifference(tempMetaDataBefore,tempMetaDataAfter,metaDataHeader,compareHeaders)
 			objectDelta[metaDataHeader] = delta
 
-			#print(metaDataHeader,delta)
 		if bool(objectDelta) == False:
 			continue 
 		array[objectID] = objectDelta
 		objectDelta = {}
+	return array
 
-	print(array)
-
-def calculateDifference(tempA,tempB,metaDataHeader,compareHeaders):
-	#print(metaDataHeader,tempA,tempB)
-
+def calculateDifference(tempMetaDataBefore,tempMetaDataAfter,metaDataHeader,compareHeaders):
 	intensity = compareHeaders[0]
 	location = compareHeaders[1]
 	rotation = compareHeaders[2]
@@ -81,11 +76,11 @@ def calculateDifference(tempA,tempB,metaDataHeader,compareHeaders):
 	rotationDelta = []
 
 	if metaDataHeader == intensity:
-		intensityDelta = str(float(tempB) - float(tempA))
+		intensityDelta = str(float(tempMetaDataAfter) - float(tempMetaDataBefore))
 		return metaDataHeader,intensityDelta
 	if metaDataHeader == location:
-		coordinatesBefore = tempA.split(" ")
-		coordinatesAfter = tempB.split(" ")
+		coordinatesBefore = tempMetaDataBefore.split(" ")
+		coordinatesAfter = tempMetaDataAfter.split(" ")
 
 		for coordinate in range(3):
 			coordinatesBefore[coordinate] = coordinatesBefore[coordinate].split("=")
@@ -100,8 +95,8 @@ def calculateDifference(tempA,tempB,metaDataHeader,compareHeaders):
 		return metaDataHeader,locationDelta
 
 	if metaDataHeader == rotation:
-		coordinatesBefore = tempA.split(" ")
-		coordinatesAfter = tempB.split(" ")
+		coordinatesBefore = tempMetaDataBefore.split(" ")
+		coordinatesAfter = tempMetaDataAfter.split(" ")
 
 		for coordinate in range(3):
 			coordinatesBefore[coordinate] = coordinatesBefore[coordinate].split("=")
@@ -114,11 +109,6 @@ def calculateDifference(tempA,tempB,metaDataHeader,compareHeaders):
 			rotationDelta.append(str(delta))
 		return metaDataHeader,rotationDelta
 
-
-	
-
-
-
 def main():
 	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
 
@@ -126,7 +116,7 @@ def main():
 	csvDictBefore = convertToDictionary(csvBefore,headers)
 	csvDictAfter = convertToDictionary(csvAfter,headers)
 
-	compareDictionaries(csvDictBefore,csvDictAfter,headers)
+	array = compareDictionaries(csvDictBefore,csvDictAfter,headers)
 
 	csvFileBefore.close()
 	csvFileAfter.close()
