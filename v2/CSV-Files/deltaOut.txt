@@ -1,0 +1,1 @@
+{"Revit.Element.Id.362198": {"Intensity": "-2.0"}, "Revit.Element.Id.362896": {"Intensity": "-143.957663", "Location": ["4.08", "97.82", "0.0"], "Rotation": ["0.0", "90.0", "0.0"]}}
