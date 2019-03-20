@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import csv
-def readCSV():
-	fileFilePathBefore = "CSV_FileA.csv"
-	fileFilePathAfter = "CSV_FileB.csv"
-	delimiter = ";"
+
+def readCSV(fileFilePathBefore,fileFilePathAfter,delimiter):
 	try:
 		csvFileBefore = open(fileFilePathBefore)
 	except Exception as e:
@@ -110,7 +108,11 @@ def calculateDifference(tempMetaDataBefore,tempMetaDataAfter,metaDataHeader,comp
 		return metaDataHeader,rotationDelta
 
 def main():
-	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
+	fileFilePathBefore = "CSV_FileA.csv"
+	fileFilePathAfter = "CSV_FileB.csv"
+	delimiter = ";"
+
+	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV(fileFilePathBefore,fileFilePathAfter,delimiter)
 
 	headers = ["ID","Date","Intensity", "Location","Rotation"]
 	csvDictBefore = convertToDictionary(csvBefore,headers)
