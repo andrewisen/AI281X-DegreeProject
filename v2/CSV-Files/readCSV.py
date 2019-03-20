@@ -34,13 +34,20 @@ def convertToDictionary(csvFile):
 	
 	return objects
 
+def compareDictionaries(csvDictBefore,csvDictAfter):
+
+	if len(csvDictBefore) != len(csvDictAfter):
+		print("Error: Dictionaries not equal lenght.")
+		return
+
+
 def main():
 	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
 
 	csvDictBefore = convertToDictionary(csvBefore)
 	csvDictAfter = convertToDictionary(csvAfter)
 
-	#print(csvDictBefore)
+	compareDictionaries(csvDictBefore,csvDictAfter)
 
 	csvFileBefore.close()
 	csvFileAfter.close()
