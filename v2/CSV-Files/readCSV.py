@@ -24,16 +24,21 @@ def readCSV():
 
 def convertToDictionary(csvFile,headers):
 	objects = {}
-	metaData = {}
+	#metaData = {}
 
-	for line in csvFile:
+
+	for row in csvFile:
+		metaData = {}
 		for _ in range(len(headers)):
-			metaData[headers[_]] = line[_]
-		objects[line[0]] = metaData
-	
+			metaData[headers[_]] = row[_]
+		objects[row[0]] = metaData
+		
 	return objects
 
 def compareDictionaries(csvDictBefore,csvDictAfter,headers):
+	compareHeaders = headers[2:]
+	array = {}
+	#print(csvDictBefore)
 
 	if len(csvDictBefore) != len(csvDictAfter):
 		print("Error: Dictionaries not equal lenght.")
@@ -45,11 +50,24 @@ def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 			metaDataAfter = csvDictAfter[objectID]
 		except Exception as e:
 			print("Error: Can't open dictionaries.")
-			print(e)
 			return
-		print(metaDataBefore)
-		#for _ in range(1,len(csvDictBefore)):
-		#	print(metaDataBefore[_])
+		for metaDataHeader in compareHeaders:
+			A = metaDataBefore[metaDataHeader]
+			B = metaDataAfter[metaDataHeader]
+
+			if A == B:
+				continue
+	
+
+			#print(A,end="\n\n")
+
+			##continue
+
+
+			#array[objectID] = [metaDataHeader,metaDataBefore[metaDataHeader],metaDataAfter[metaDataHeader]]
+
+	#print(array)
+
 
 def main():
 	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
