@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import csv
+import json
 
 def readCSV(fileFilePathBefore,fileFilePathAfter,delimiter):
 	try:
@@ -107,21 +108,31 @@ def calculateDifference(tempMetaDataBefore,tempMetaDataAfter,metaDataHeader,comp
 			rotationDelta.append(str(delta))
 		return metaDataHeader,rotationDelta
 
+def exportData(array):
+	
+	my_dict = json.dumps(array)
+	with open("deltaOut.txt", "w") as file:
+		file.write(my_dict)
+
 def main():
+	# === SETTINGS ===
 	fileFilePathBefore = "CSV_FileA.csv"
 	fileFilePathAfter = "CSV_FileB.csv"
 	delimiter = ";"
+	headers = ["ID","Date","Intensity", "Location","Rotation"] # Hard coding
 
+	# === OPEN FILES ===
 	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV(fileFilePathBefore,fileFilePathAfter,delimiter)
 
-	headers = ["ID","Date","Intensity", "Location","Rotation"]
+	# === READ FILE ===
 	csvDictBefore = convertToDictionary(csvBefore,headers)
 	csvDictAfter = convertToDictionary(csvAfter,headers)
 
-	array = compareDictionaries(csvDictBefore,csvDictAfter,headers)
 
-	csvFileBefore.close()
-	csvFileAfter.close()
+	array = compareDictionaries(csvDictBefore,csvDictAfter,headers)
+	exportData(array)
+	# === OPEN FILES ===
+	csvFileBefore.close(), csvFileAfter.close()
 	
 if __name__== "__main__":
 	main()
