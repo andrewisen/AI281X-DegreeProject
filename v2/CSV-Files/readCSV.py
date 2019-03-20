@@ -38,6 +38,7 @@ def convertToDictionary(csvFile,headers):
 def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 	compareHeaders = headers[2:]
 	array = {}
+	objectDelta = {}
 	#print(csvDictBefore)
 
 	if len(csvDictBefore) != len(csvDictAfter):
@@ -52,21 +53,70 @@ def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 			print("Error: Can't open dictionaries.")
 			return
 		for metaDataHeader in compareHeaders:
-			A = metaDataBefore[metaDataHeader]
-			B = metaDataAfter[metaDataHeader]
+			tempA = metaDataBefore[metaDataHeader]
+			tempB = metaDataAfter[metaDataHeader]
 
-			if A == B:
+			if tempA == tempB:
 				continue
+			metaDataHeader, delta = calculateDifference(tempA,tempB,metaDataHeader,compareHeaders)
+			objectDelta[metaDataHeader] = delta
+
+			#print(metaDataHeader,delta)
+		if bool(objectDelta) == False:
+			continue 
+		array[objectID] = objectDelta
+		objectDelta = {}
+
+	print(array)
+
+def calculateDifference(tempA,tempB,metaDataHeader,compareHeaders):
+	#print(metaDataHeader,tempA,tempB)
+
+	intensity = compareHeaders[0]
+	location = compareHeaders[1]
+	rotation = compareHeaders[2]
+
+	intensityDelta = ""
+	locationDelta = []
+	rotationDelta = []
+
+	if metaDataHeader == intensity:
+		intensityDelta = str(float(tempB) - float(tempA))
+		return metaDataHeader,intensityDelta
+	if metaDataHeader == location:
+		coordinatesBefore = tempA.split(" ")
+		coordinatesAfter = tempB.split(" ")
+
+		for coordinate in range(3):
+			coordinatesBefore[coordinate] = coordinatesBefore[coordinate].split("=")
+			coordinatesAfter[coordinate] = coordinatesAfter[coordinate].split("=")
+			
+			locationBefore = float(coordinatesBefore[coordinate][1])
+			locationAfter = float(coordinatesAfter[coordinate][1])
+			delta = locationAfter - locationBefore
+			delta = round(delta,2)
+			locationDelta.append(str(delta))
+
+		return metaDataHeader,locationDelta
+
+	if metaDataHeader == rotation:
+		coordinatesBefore = tempA.split(" ")
+		coordinatesAfter = tempB.split(" ")
+
+		for coordinate in range(3):
+			coordinatesBefore[coordinate] = coordinatesBefore[coordinate].split("=")
+			coordinatesAfter[coordinate] = coordinatesAfter[coordinate].split("=")
+			
+			locationBefore = float(coordinatesBefore[coordinate][1])
+			locationAfter = float(coordinatesAfter[coordinate][1])
+			delta = locationAfter - locationBefore
+			delta = round(delta,2)
+			rotationDelta.append(str(delta))
+		return metaDataHeader,rotationDelta
+
+
 	
 
-			#print(A,end="\n\n")
-
-			##continue
-
-
-			#array[objectID] = [metaDataHeader,metaDataBefore[metaDataHeader],metaDataAfter[metaDataHeader]]
-
-	#print(array)
 
 
 def main():
