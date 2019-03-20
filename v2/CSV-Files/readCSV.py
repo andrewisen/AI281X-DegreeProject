@@ -22,8 +22,7 @@ def readCSV():
 
 	return csvBefore,csvAfter,csvFileBefore,csvFileAfter
 
-def convertToDictionary(csvFile):
-	headers = ["ID","Date","Intensity", "Location","Rotation"]
+def convertToDictionary(csvFile,headers):
 	objects = {}
 	metaData = {}
 
@@ -34,25 +33,35 @@ def convertToDictionary(csvFile):
 	
 	return objects
 
-def compareDictionaries(csvDictBefore,csvDictAfter):
+def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 
 	if len(csvDictBefore) != len(csvDictAfter):
 		print("Error: Dictionaries not equal lenght.")
 		return
 
+	for objectID in csvDictBefore:
+		try:
+			metaDataBefore = csvDictBefore[objectID]
+			metaDataAfter = csvDictAfter[objectID]
+		except Exception as e:
+			print("Error: Can't open dictionaries.")
+			print(e)
+			return
+		print(metaDataBefore)
+		#for _ in range(1,len(csvDictBefore)):
+		#	print(metaDataBefore[_])
 
 def main():
 	csvBefore,csvAfter,csvFileBefore,csvFileAfter = readCSV()
 
-	csvDictBefore = convertToDictionary(csvBefore)
-	csvDictAfter = convertToDictionary(csvAfter)
+	headers = ["ID","Date","Intensity", "Location","Rotation"]
+	csvDictBefore = convertToDictionary(csvBefore,headers)
+	csvDictAfter = convertToDictionary(csvAfter,headers)
 
-	compareDictionaries(csvDictBefore,csvDictAfter)
+	compareDictionaries(csvDictBefore,csvDictAfter,headers)
 
 	csvFileBefore.close()
 	csvFileAfter.close()
-
-
 	
 if __name__== "__main__":
 	main()
