@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JsonData</name>
+    </assembly>
+    <members>
+        <member name="T:JsonData.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:JsonData.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:JsonData.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:JsonData.Properties.Resources.JsonData_Elements_JsonObject_ByKeysAndValues_Large">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:JsonData.Properties.Resources.JsonData_Elements_JsonObject_ByKeysAndValues_Small">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:JsonData.Elements.JsonOption">
+            <summary>
+            Options for JsonObjects
+            </summary>
+        </member>
+        <member name="F:JsonData.Elements.JsonOption.None">
+            <summary>
+            You are reading this because of a known issue on Dynamo 2.0. These options are implemented 
+            and embeded on nodes with dropdown selector. They will automatically hide once bug is resolve on next version.
+            No action.
+            </summary>
+        </member>
+        <member name="F:JsonData.Elements.JsonOption.Update">
+            <summary>
+            You are reading this because of a known issue on Dynamo 2.0. These options are implemented 
+            and embeded on nodes with dropdown selector. They will automatically hide once bug is resolve on next version.
+            If object contains the key, update its value.
+            </summary>
+        </member>
+        <member name="F:JsonData.Elements.JsonOption.Combine">
+            <summary>
+            You are reading this because of a known issue on Dynamo 2.0. These options are implemented 
+            and embeded on nodes with dropdown selector. They will automatically hide once bug is resolve on next version.
+            If object contains the key, combine the values.
+            </summary>
+        </member>
+        <member name="T:JsonData.Elements.JsonOptions">
+            <summary>
+            Static Class wrapping method to return JsonOption by its name
+            </summary>
+        </member>
+        <member name="M:JsonData.Elements.JsonOptions.ReturnOptionByName(System.String)">
+            <summary>
+            Static Method to return a JsonOption by its name.
+            </summary>
+        </member>
+        <member name="T:JsonData.Elements.JsonObject">
+            <summary>
+            Class for handle information in a json format.
+            </summary>
+        </member>
+        <member name="P:JsonData.Elements.JsonObject.Keys">
+            <summary>
+            Returns keys of attributes in the JsonObject.
+            </summary>
+            <returns name="keys">JsonObject Keys</returns>
+            <search>
+            json, jsonobject, keys
+            </search>
+        </member>
+        <member name="P:JsonData.Elements.JsonObject.Values">
+            <summary>
+            Returns values of attributes in the JsonObject.
+            </summary>
+            <returns name="values">JsonObject Values</returns>
+            <search>
+            json, jsonobject, values
+            </search>
+        </member>
+        <member name="P:JsonData.Elements.JsonObject.Size">
+            <summary>
+            Returns the number of attributes on the JsonObject.
+            </summary>
+            <returns name="size">Number of attributes on JsonObject</returns>
+            <search>
+            json, jsonobject, size
+            </search>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.#ctor(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object},System.Boolean,JsonData.Elements.JsonOption)">
+            <summary>
+            JsonObject constructor by a given key-value pair of items.
+            </summary>
+            <param name="keys">Key or keys</param>
+            <param name="values">Value or values</param>
+            <param name="nesting">Apply nesting behaviour if key input is a single string concatenated by dots, representing the desired nested structure</param>
+            <param name="jsonOption">Options to modify a JsonObject</param>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.#ctor(Newtonsoft.Json.Linq.JObject,System.Boolean)">
+            <summary>
+            JsonObject constructor by a given JObject element.
+            </summary>
+            <param name="jObject">JObject element.</param>
+            <param name="nesting">Apply nesting behaviour if key input is a single string concatenated by 
+            dots, representing the desired nested structure</param>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.AddInternal(JsonData.Elements.JsonObject,System.String,System.Object,JsonData.Elements.JsonOption)">
+            <summary>
+            Static method to add a value to a JsonObject. Used for normal and recursive additions.
+            </summary>
+            <param name="json">JsonObject where to add a new item</param>
+            <param name="key">Key</param>
+            <param name="value">Value</param>
+            <param name="jsonOption">Options</param>
+            <returns></returns>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.AddRecursive(JsonData.Elements.JsonObject,System.String,System.Object,JsonData.Elements.JsonOption)">
+            <summary>
+            Method to add values recursively to a JsonObject.
+            </summary>
+            <param name="json"></param>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="jsonOption"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.GetValueRecursive(JsonData.Elements.JsonObject,System.String,System.Boolean)">
+            <summary>
+            Returns the value associated with the given key from the dict.
+            </summary>
+            <param name="jsonObject">JsonObject to get values from</param>
+            <param name="key">Attribute's key</param>
+            <param name="nesting"></param>
+            <returns name="value">Value returned</returns>
+            <search>
+            json, jsonobject, search, bykey
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.ByKeysAndValues(System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object},System.Boolean,JsonData.Elements.JsonOption)">
+            <summary>
+            JsonObject constructor by a given key-value pair.
+            It accepts nested structures by providing keys divided by points as a single string.
+            </summary>
+            <param name="keys"> Key or list of keys</param>
+            <param name="values">Value or list of values</param>
+            <param name="nesting">Apply nesting behaviour if key input is a single string concatenated by 
+            dots, representing the desired nested structure</param>
+            <param name="jsonOption">Handling options where duplicate keys are found. Use JsonOptions 
+            dropdown node to select appropiate behaviour</param>
+            <returns name="jsonObject">New JsonObject</returns>
+            <search>
+            json, jsonobject, create, bykeysandvalues
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.ByDictionary(DesignScript.Builtin.Dictionary)">
+            <summary>
+            Creates a new instance of JsonObject from a Dynamo Dictionary's components.
+            </summary>
+            <param name="dictionary">DesignDcript.Builtin.Dictionary</param>
+            <returns name="jsonObject">New JsonObject</returns>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.Add(JsonData.Elements.JsonObject,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.Object},System.Boolean,JsonData.Elements.JsonOption)">
+            <summary>
+            Adds new attribute to the JsonObject. If given key already on the object and update set to
+            True, value associated with the key will be updated. An error will be thrown otherwise.
+            </summary>
+            <param name="key">Key to add or update</param>
+            <param name="value">Value to add or update</param> 
+            <param name="nesting">Apply nesting behaviour if key input is a single string concatenated by 
+            dots, representing the desired nested structure</param>
+            <param name="jsonOption">Handling options where duplicate keys are found. Use JsonOptions dropdown node to select appropiate behaviour</param>
+            <returns name="jsonObject">dict with added attribute/s</returns>
+            <search>
+            json, jsonobject, add
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.Remove(JsonData.Elements.JsonObject,System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            Remove keys from the given JsonObject if they exist.
+            </summary>
+            <param name="keys">Key or list of keys to remove</param>
+            <returns name="jsonObject">JsonObject with keys removed</returns>
+            <param name="nesting">Apply nesting behaviour if key input is a single string concatenated by 
+            dots, representing the desired nested structure</param>
+            <search>
+            json, jsonobject, remove
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.Merge(JsonData.Elements.JsonObject,System.Collections.Generic.List{JsonData.Elements.JsonObject},JsonData.Elements.JsonOption)">
+            <summary>
+            Merge one JsonObject with one or multiple other JsonObjects.
+            </summary>
+            <param name="others">JsonObject(s) to merge into the main one</param>
+            <param name="jsonOption">Handling options where duplicate keys are found. Use JsonOptions dropdown node to select appropiate behaviour</param>
+            <returns name="jsonObject">New JsonObject</returns>
+            <search>
+            json, jsonobject, merge
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.GetValueByKey(JsonData.Elements.JsonObject,System.String,System.Boolean)">
+            <summary>
+            Returns the value associated with the given key from the dict. Returns null if key is not found.
+            </summary>
+            <param name="key">Attribute's key</param>
+            <param name="nesting">Apply nesting behaviour if key input is a single string concatenated by 
+            dots, representing the desired nested structure</param>
+            <returns name="value">Value returned</returns>
+            <search>
+            json, jsonobject, search, bykey
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.SortKeys">
+            <summary>
+            Sorts JsonObject's properties alphabetically by its keys.
+            </summary>
+            <returns name="sortedJsonObject">Sorted JsonObject</returns>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.SortByKeyValue(System.Collections.Generic.List{JsonData.Elements.JsonObject},System.String)">
+            <summary>
+            Sorts a list of JsonObjects by the ascending order of the values associated with the given key.
+            </summary>
+            <param name="jsonObjects">List of JsonObjects</param>
+            <param name="key">Key to sort JsonObjects with</param>
+            <returns></returns>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.FilterByKeyAndValue(System.Collections.Generic.List{JsonData.Elements.JsonObject},System.String,System.Object)">
+            <summary>
+            Filters JsonObjects which contains the given key-value pair. If value is of type string, it will test if it contains the value given.
+            </summary>
+            <param name="jsonObjects">List of JsonObjects</param>
+            <param name="key">Key to look for</param>
+            <param name="value">Value to match</param>
+            <returns name="in">JsonObjects matching the key-value pair given</returns>
+            <returns name="out">JsonObjects not matching the key-value pair given</returns>
+            <search>
+            json, jsonobject, filter
+            </search> 
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.ToDictionary(JsonData.Elements.JsonObject)">
+            <summary>
+            Creates a new instance of Dynamo Dictionary from a JsonObject's components
+            </summary>
+            <param name="jsonObject">JsonObject</param>
+            <returns name="dictionary">DesignScript.Builtin.Dictionary</returns>
+        </member>
+        <member name="M:JsonData.Elements.JsonObject.ToString">
+            <summary>
+            Serialize dict to String
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:JsonData.JsonNet">
+            <summary>
+            Parent class for json elements.
+            </summary>
+        </member>
+        <member name="M:JsonData.JsonNet.ReturnValidObject(Newtonsoft.Json.Linq.JToken)">
+            <summary>
+            Returns a valid package json object the input object.
+            Same implementation as in:
+            https://github.com/pboyer/Dynamo/blob/ac9178c5790e6704ce5f5a768ab3eaceb436782d/src/Libraries/CoreNodes/JSON.cs#L24
+            </summary>
+            <param name="token">Input object</param>
+            <returns name="object">return object</returns>
+        </member>
+        <member name="T:JsonData.Utilities.Read">
+            <summary>
+            Class to handle parsing and read/write from and to json format strings or files.
+            </summary>
+        </member>
+        <member name="M:JsonData.Utilities.Read.FromJsonFile(System.String)">
+            <summary>
+            Reads and parses a json file. It will return JsonObject, 
+            JsonArray or other match that the parser can do from the input.
+            Error will be thrown if parser fails.
+            </summary>
+            <param name="filepath">Filepath of the json file</param>
+            <returns name="object">Object returned by the parser.</returns>
+            <returns name="type">Type of the returned object.</returns>
+            <search>
+            json, parser, from file, jsonfile
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Read.FromXMLFile(System.String)">
+            <summary>
+            Reads and parses a XML file. It will return JsonObject, JsonArray or other match that the parser can do from the input.
+            Error will be thrown if parser fails.
+            </summary>
+            <param name="filepath">Filepath of the XML file</param>
+            <returns name="object">Object returned by the parser.</returns>
+            <returns name="type">Type of the returned object.</returns>
+            <search>
+            json, parser, from file, xml, xmlfile
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Read.FromCSVFile(System.String)">
+            <summary>
+            Reads and parses a CSV formated file. It will return a list of JsonObjects
+            Error will be thrown if parser fails.
+            </summary>
+            <param name="filepath">Filepath of the XML file</param>
+            <returns name="jsonObjects[]">List of JsonObjects returned by the parser.</returns>
+            <search>
+            json, parser, from file, csv, csvfile
+            </search>
+        </member>
+        <member name="T:JsonData.Utilities.Parse">
+            <summary>
+            Class to handle parsing strings to Json format.
+            </summary>
+        </member>
+        <member name="M:JsonData.Utilities.Parse.String(System.String)">
+            <summary>
+            Parses a json formated string. It will return JsonObjects
+            or other match that the parser can do from the input.
+            Error will be thrown if parser fails.
+            </summary>
+            <param name="jsonString">String with a json format</param>
+            <returns name="object">Object returned by the parser</returns>
+            <search>
+            json, parse, jsonstring
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Parse.XMLString(System.String)">
+            <summary>
+            Parses a xml formated string. It will return JsonObject,
+            JsonArray or other match that the parser can do from the input.
+            Error will be thrown if parser fails.
+            </summary>
+            <param name="xmlString">XML formatted string</param>
+            <returns name="object">Object returned by the parser</returns>
+            <returns name="type">Type of the returned object</returns>
+            <search>
+            json, parse, xml
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Parse.CSVString(System.String)">
+            <summary>
+            Parses a CSV formated string. It will return a list of JsonObjects
+            Error will be thrown if parser fails.
+            </summary>
+            <param name="csvString">CSV formatted string</param>
+            <returns name="jsonObjects">List of JsonObjets returned by the parser</returns>
+            <search>
+            json, parse, csv
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Parse.JsonToXML(JsonData.Elements.JsonObject,System.String)">
+            <summary>
+            Converts a JsonObject to XML string format.
+            </summary>
+            <param name="jsonObject">JsonObject</param>
+            <param name="root">Value to wrap XML in case is necesary. 
+            More info https://www.newtonsoft.com/json/help/html/ConvertingJSONandXML.htm#! </param>
+            <returns name="xmlString">XML formatted string converted from JsonObject</returns>
+            <search>
+            json, convert, xml, parse
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Parse.JsonToCSV(System.Collections.Generic.List{JsonData.Elements.JsonObject})">
+            <summary>
+            Converts a list of JsonObject to CSV string format. JsonObjects must have one level only
+            (no other JsonObject or JsonArray as values), being the keys the header of the CSV string.
+            </summary>
+            <param name="jsonObjects">List of JsonObjects with same keys</param>
+            <returns name="csvString">CSV formatted string converted from a list of JsonObjects</returns>
+            <search>
+            json, convert, csv, parse
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Parse.JsonToString(System.Collections.Generic.List{JsonData.Elements.JsonObject})">
+            <summary>
+            Converts a list of JsonObject to CSV string format.
+            </summary>
+            <param name="jsonObjects">Single or list of JsonObjects</param>
+            <returns name="string">Returns the parsed string</returns>
+            <search>
+            json, parse, to string
+            </search>
+        </member>
+        <member name="T:JsonData.Utilities.Write">
+            <summary>
+            Class to handle parsing and read/write from and to json format strings or files.
+            </summary>
+        </member>
+        <member name="M:JsonData.Utilities.Write.ToJsonFile(System.Collections.Generic.List{JsonData.Elements.JsonObject},System.String)">
+            <summary>
+            Writes the JsonObject or JsonArray to a json file.
+            </summary>
+            <param name="jsonObjects">Single or list of JsonObjects</param>
+            <param name="filepath">File path for json file</param>
+            <returns name="filepath">Returns the filepath if write operation is succesful</returns>
+            <search>
+            json, parser, to file, jsonfile
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Write.ToXMLFile(JsonData.Elements.JsonObject,System.String,System.String)">
+            <summary>
+            Writes the JsonObject or JsonArray to a XML file.
+            </summary>
+            <param name="jsonObject">JsonObject or JsonArray element</param>
+            <param name="filepath">File path for XML file</param>
+            <param name="root">Value to wrap XML in case is necesary.
+            More info https://www.newtonsoft.com/json/help/html/ConvertingJSONandXML.htm#! </param>
+            <returns name="filepath">Returns the filepath if write operation is succesful</returns>
+            <search>
+            json, parser, to file, xmlfile, xml
+            </search>
+        </member>
+        <member name="M:JsonData.Utilities.Write.ToCSVFile(System.Collections.Generic.List{JsonData.Elements.JsonObject},System.String)">
+            <summary>
+            Writes a list of JsonObject to a CSV file. JsonObjects must have one level only
+            (no other JsonObject or JsonArray as values), being the keys the header of the CSV string.
+            </summary>
+            <param name="jsonObjects">List of JsonObjects</param>
+            <param name="filepath">File path for CSV file</param>
+            <returns name="filepath">Returns the filepath if write operation is succesful</returns>
+            <search>
+            json, parser, to file, csvfile, csv
+            </search>
+        </member>
+    </members>
+</doc>
