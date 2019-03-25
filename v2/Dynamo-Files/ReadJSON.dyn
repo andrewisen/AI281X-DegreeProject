@@ -942,6 +942,105 @@
       ],
       "Replication": "Disabled",
       "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.SetLocation@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "955ac458fad1481ba3fa2aa9cbf4fd0d",
+      "Inputs": [
+        {
+          "Id": "5ad0262e5f1d43d0b1dfa3de3e23ade0",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e6d773a1db884c9aaa79e258e3cb3d75",
+          "Name": "geometry",
+          "Description": "New Location Point or Curve\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5b79b8b2978145ad99213587a5a89d47",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Update an existing element's location\n\nElement.SetLocation (geometry: Geometry): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyInstance.SetRotation@double",
+      "Id": "98d463ad8d2243c783b14862b71df1c8",
+      "Inputs": [
+        {
+          "Id": "18e8d73301f74c5eb3ca5223b6dc14c7",
+          "Name": "familyInstance",
+          "Description": "Revit.Elements.FamilyInstance",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cf8775401c26461e8be36a9936c7a696",
+          "Name": "degree",
+          "Description": "The Euler angle around Z-axis.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0815b6c882a7477b8f1318ea415041ef",
+          "Name": "FamilyInstance",
+          "Description": "The result family instance.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Set the Euler angle of the family instance around its local Z-axis.\n\nFamilyInstance.SetRotation (degree: double): FamilyInstance"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 0.0,
+      "Id": "69d34b5fddf5471f8bb075a0544170bf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f05df464f8ac47059408371f767c303b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number."
     }
   ],
   "Connectors": [
@@ -976,6 +1075,16 @@
       "Id": "c3a2a6e61ca14a06aa99515d930039a4"
     },
     {
+      "Start": "c69a710e21a3493d889f3540b8e25aad",
+      "End": "18e8d73301f74c5eb3ca5223b6dc14c7",
+      "Id": "76a87c3fd0fe441cac79bbe7658042d9"
+    },
+    {
+      "Start": "c69a710e21a3493d889f3540b8e25aad",
+      "End": "5ad0262e5f1d43d0b1dfa3de3e23ade0",
+      "Id": "22566f7bb67b45f69ec4f76ce9a18f18"
+    },
+    {
       "Start": "eddf9b6022654a42bdc645ab8e1c6fe0",
       "End": "ccc9fa07576e4431816a3cce6ce75528",
       "Id": "4343290f2fa84ad3aa07aa9fe748b7b1"
@@ -989,6 +1098,11 @@
       "Start": "9f3f6bed2561436e942e368fac94141e",
       "End": "a9f4765ef5f94bf198bae685e6fbf6a2",
       "Id": "81c6edd19af64f229b2d61b1fefe0cfb"
+    },
+    {
+      "Start": "9f3f6bed2561436e942e368fac94141e",
+      "End": "e6d773a1db884c9aaa79e258e3cb3d75",
+      "Id": "1d90845af5734c9fa35ada9426a0504c"
     },
     {
       "Start": "c85b542ea50244bda6b11315ca743853",
@@ -1109,6 +1223,11 @@
       "Start": "c05650e1b4b84d878f8e734a51bcfddb",
       "End": "8328e162fdcd4bb7ab2fea1c6b3105d3",
       "Id": "56ce141fae314407ab0a8254195de31a"
+    },
+    {
+      "Start": "f05df464f8ac47059408371f767c303b",
+      "End": "cf8775401c26461e8be36a9936c7a696",
+      "Id": "e4d9410403304fc5939da19120fc2b0b"
     }
   ],
   "Dependencies": [],
@@ -1182,8 +1301,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2409.3078520634476,
-        "Y": 890.38712830102884
+        "X": 2398.6090303952842,
+        "Y": 893.95340219041657
       },
       {
         "ShowGeometry": true,
@@ -1192,8 +1311,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 2125.3078520634476,
-        "Y": 886.17379496769547
+        "X": 2114.6090303952842,
+        "Y": 889.7400688570832
       },
       {
         "ShowGeometry": true,
@@ -1222,8 +1341,8 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1814.3078520634476,
-        "Y": 981.59997852554511
+        "X": 1803.6090303952842,
+        "Y": 985.16625241493284
       },
       {
         "ShowGeometry": true,
@@ -1434,6 +1553,36 @@
         "Excluded": false,
         "X": 2999.4105581887461,
         "Y": 170.75513970439343
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element.SetLocation",
+        "Id": "955ac458fad1481ba3fa2aa9cbf4fd0d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 6277.9259827032447,
+        "Y": 735.26303452335446
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyInstance.SetRotation",
+        "Id": "98d463ad8d2243c783b14862b71df1c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3279.6793238286737,
+        "Y": 1103.9554675368031
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "69d34b5fddf5471f8bb075a0544170bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3114.9225607827607,
+        "Y": 1142.4841535697717
       }
     ],
     "Annotations": [
@@ -1444,10 +1593,10 @@
           "cfcafb7ae7144a8295b49d9de54ac724",
           "3ccad0899f5c4cc28710b91b1a7c0612",
           "7ebe94884f1a453884540d19fb8f681c",
+          "5078568b48e84d88897a23b66c61f99d",
           "548250c28a48493684211cf521ccdb5d",
           "4d68244479804d9893822fc759fb4ce4",
-          "235719a99e5b46658b0df0627e42e43f",
-          "5078568b48e84d88897a23b66c61f99d"
+          "235719a99e5b46658b0df0627e42e43f"
         ],
         "Left": 712.60723301645589,
         "Top": 695.21403365929962,
@@ -1467,13 +1616,13 @@
           "70b16ad55ef6468e9e3f6d5e664aff72",
           "ee13f29b0f23449b8131c6e18936dd14"
         ],
-        "Left": 1804.3078520634476,
-        "Top": 833.17379496769547,
+        "Left": 1793.6090303952842,
+        "Top": 836.7400688570832,
         "Width": 1056.0,
         "Height": 241.42618355784964,
         "FontSize": 36.0,
-        "InitialTop": 886.17379496769547,
-        "InitialHeight": 138.12654499239966,
+        "InitialTop": 889.7400688570832,
+        "InitialHeight": 240.42618355784964,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1491,7 +1640,7 @@
         "Height": 277.76380209814505,
         "FontSize": 36.0,
         "InitialTop": 380.64736220329922,
-        "InitialHeight": 227.61466403469973,
+        "InitialHeight": 301.76380209814505,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1508,7 +1657,7 @@
         "Height": 371.0,
         "FontSize": 36.0,
         "InitialTop": 442.42752516658459,
-        "InitialHeight": 149.0,
+        "InitialHeight": 161.59713679080323,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1526,7 +1675,7 @@
         "Height": 277.76380209814511,
         "FontSize": 36.0,
         "InitialTop": 684.196011442322,
-        "InitialHeight": 254.76380209814511,
+        "InitialHeight": 301.76380209814511,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1543,7 +1692,7 @@
         "Height": 199.14913806344498,
         "FontSize": 36.0,
         "InitialTop": 92.606001640948449,
-        "InitialHeight": 254.763802098145,
+        "InitialHeight": 223.14913806344498,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1568,7 +1717,7 @@
         "Height": 440.0,
         "FontSize": 36.0,
         "InitialTop": 247.66227296865165,
-        "InitialHeight": 664.89093864677352,
+        "InitialHeight": 439.0,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1586,7 +1735,7 @@
         "Height": 202.0,
         "FontSize": 36.0,
         "InitialTop": 382.04843339990077,
-        "InitialHeight": 186.52469745867961,
+        "InitialHeight": 145.0,
         "TextblockHeight": 43.0,
         "Background": "#FFC1D676"
       },
@@ -1633,8 +1782,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": -700.85541976359923,
-    "Y": 189.199272956196,
-    "Zoom": 0.33352323672904377
+    "X": -3638.2150871157955,
+    "Y": -169.36062858999196,
+    "Zoom": 0.64198008706226106
   }
 }
