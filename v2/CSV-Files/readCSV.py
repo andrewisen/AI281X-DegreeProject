@@ -61,6 +61,7 @@ def compareDictionaries(csvDictBefore,csvDictAfter,headers):
 
 		if bool(objectDelta) == False:
 			continue 
+		objectID = objectID.split(".")[-1]
 		array[objectID] = objectDelta
 		objectDelta = {}
 	return array

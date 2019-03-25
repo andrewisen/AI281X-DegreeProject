@@ -4,7 +4,16 @@
   "Description": null,
   "Name": "ReadJSON",
   "ElementResolver": {
-    "ResolutionMap": {}
+    "ResolutionMap": {
+      "Elements.ElementSelector": {
+        "Key": "Revit.Elements.ElementSelector",
+        "Value": "RevitNodes.dll"
+      },
+      "Revit.Elements.ElementSelector": {
+        "Key": "Revit.Elements.ElementSelector",
+        "Value": "RevitNodes.dll"
+      }
+    }
   },
   "Inputs": [],
   "Outputs": [],
@@ -120,12 +129,132 @@
       "Description": "Concatenates multiple strings into a single string.\n\nString.Concat (strings: string[]): string"
     },
     {
-      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
-      "NodeType": "ExtensionNode",
-      "Id": "12fc056e25ba4fb98ff3c6a9100a23b2",
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "JsonData.Elements.JsonObject.Keys",
+      "Id": "eca18a793f9b4763835b2ca24157d93a",
       "Inputs": [
         {
-          "Id": "632e76a8933f41deac76aa0be76ede68",
+          "Id": "c7dd5e56961c468f9233f1826d2b8064",
+          "Name": "jsonObject",
+          "Description": "JsonData.Elements.JsonObject",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "06cb62525d4240aeb6328cb3eeca6e73",
+          "Name": "keys",
+          "Description": "JsonObject Keys",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns keys of attributes in the JsonObject.\n\nJsonObject.Keys: string[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Revit.Elements.ElementSelector.ByElementId(id);",
+      "Id": "fd22a427ac7e42518073fc22124f4015",
+      "Inputs": [
+        {
+          "Id": "4f65a8374ba34860bc4e46b252d11a0b",
+          "Name": "id",
+          "Description": "id",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "434e5285ae474dbdaff1c6be5748b9c5",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.String.ToNumber@string",
+      "Id": "70b16ad55ef6468e9e3f6d5e664aff72",
+      "Inputs": [
+        {
+          "Id": "d58d1a932c3d4cdd8c06c0fc2bc1520b",
+          "Name": "str",
+          "Description": "String to be converted.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eddf9b6022654a42bdc645ab8e1c6fe0",
+          "Name": "number",
+          "Description": "Integer or double-type number.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Converts a string to an integer or a double.\n\nString.ToNumber (str: string): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FirstItem@var[]..[]",
+      "Id": "e969eb6f04664acab14363d521d94189",
+      "Inputs": [
+        {
+          "Id": "16c9bb89f9e94cada929645ae38a80e8",
+          "Name": "list",
+          "Description": "List to get the first item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9e905780a39944ffab9e9bff0e185a96",
+          "Name": "item",
+          "Description": "First item in the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the first item in a list.\n\nList.FirstItem (list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "59bb92c5a8fc4304901ef36afcca57e4",
+      "Inputs": [
+        {
+          "Id": "d6c612900d7c43b68df7c9dd4cce082a",
           "Name": "",
           "Description": "Node to evaluate.",
           "UsingDefaultValue": false,
@@ -136,7 +265,7 @@
       ],
       "Outputs": [
         {
-          "Id": "4760f7f8942c4862a74cc068d8b027a6",
+          "Id": "77b0244198d9487484a74dd0bc0108d2",
           "Name": "",
           "Description": "Watch contents.",
           "UsingDefaultValue": false,
@@ -152,8 +281,13 @@
   "Connectors": [
     {
       "Start": "f05c486476314322a783b6566fa75d0a",
-      "End": "632e76a8933f41deac76aa0be76ede68",
-      "Id": "bca0719013194379a095b47e415b5478"
+      "End": "c7dd5e56961c468f9233f1826d2b8064",
+      "Id": "9cbd2a386fbd4a819665cb9c18dd81f4"
+    },
+    {
+      "Start": "f05c486476314322a783b6566fa75d0a",
+      "End": "d6c612900d7c43b68df7c9dd4cce082a",
+      "Id": "af318336a21c406cadeeeec9681b7edf"
     },
     {
       "Start": "61342c45a5bc45b983bc2897167d1903",
@@ -168,7 +302,22 @@
     {
       "Start": "473e5d57998a4326b27e30dd0f3035ad",
       "End": "52ee8d4f4daf4de4841f481c79955db6",
-      "Id": "0b3ec885910a4553bd937abb438ec951"
+      "Id": "d40b5061b0834ed79c6688d2f5e5d998"
+    },
+    {
+      "Start": "06cb62525d4240aeb6328cb3eeca6e73",
+      "End": "16c9bb89f9e94cada929645ae38a80e8",
+      "Id": "f75bf1a3ffb1471eaaf08229fcde29e5"
+    },
+    {
+      "Start": "eddf9b6022654a42bdc645ab8e1c6fe0",
+      "End": "4f65a8374ba34860bc4e46b252d11a0b",
+      "Id": "e324e23b75734bcbaa5aa6a929eefa7b"
+    },
+    {
+      "Start": "9e905780a39944ffab9e9bff0e185a96",
+      "End": "d58d1a932c3d4cdd8c06c0fc2bc1520b",
+      "Id": "f5ee18bba81045c998ad428caf494f09"
     }
   ],
   "Dependencies": [],
@@ -176,7 +325,7 @@
   "View": {
     "Dynamo": {
       "ScaleFactor": 1.0,
-      "HasRunWithoutCrash": false,
+      "HasRunWithoutCrash": true,
       "IsVisibleInDynamoLibrary": true,
       "Version": "2.0.2.6826",
       "RunType": "Automatic",
@@ -212,7 +361,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 245.75,
+        "X": 246.86163335216645,
         "Y": 316.5
       },
       {
@@ -222,7 +371,7 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 245.75,
+        "X": 246.86163335216645,
         "Y": 454.5
       },
       {
@@ -232,18 +381,58 @@
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 621.75,
+        "X": 622.86163335216645,
         "Y": 372.5
       },
       {
         "ShowGeometry": true,
-        "Name": "Watch",
-        "Id": "12fc056e25ba4fb98ff3c6a9100a23b2",
+        "Name": "JsonObject.Keys",
+        "Id": "eca18a793f9b4763835b2ca24157d93a",
         "IsSetAsInput": false,
         "IsSetAsOutput": false,
         "Excluded": false,
-        "X": 1273.5,
-        "Y": 212.0
+        "X": 1238.7690112292917,
+        "Y": 393.49263503765462
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "fd22a427ac7e42518073fc22124f4015",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2088.3244935077291,
+        "Y": 611.68822244991406
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String.ToNumber",
+        "Id": "70b16ad55ef6468e9e3f6d5e664aff72",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1765.0164300025494,
+        "Y": 530.03824154837923
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.FirstItem",
+        "Id": "e969eb6f04664acab14363d521d94189",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1464.7520855662251,
+        "Y": 557.74120189815915
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "59bb92c5a8fc4304901ef36afcca57e4",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1079.0873720024374,
+        "Y": 548.63119677573809
       }
     ],
     "Annotations": [
@@ -258,7 +447,7 @@
           "4d68244479804d9893822fc759fb4ce4",
           "235719a99e5b46658b0df0627e42e43f"
         ],
-        "Left": 235.75,
+        "Left": 236.86163335216645,
         "Top": 180.5,
         "Width": 643.0,
         "Height": 342.0,
@@ -272,7 +461,7 @@
         "Id": "548250c28a48493684211cf521ccdb5d",
         "Title": "N.B. Be sure to add a backslash at the end of the string.\r\n\r\nE.g. \"C:\\Users\\localusers\\Revit\\\"",
         "Nodes": [],
-        "Left": 245.75,
+        "Left": 246.86163335216645,
         "Top": 233.5,
         "Width": 0.0,
         "Height": 0.0,
@@ -286,7 +475,7 @@
         "Id": "4d68244479804d9893822fc759fb4ce4",
         "Title": "E.g. \"C:\\Users\\localusers\\Revit\\myJSON.txt\"",
         "Nodes": [],
-        "Left": 621.75,
+        "Left": 622.86163335216645,
         "Top": 333.5,
         "Width": 0.0,
         "Height": 0.0,
@@ -300,7 +489,7 @@
         "Id": "235719a99e5b46658b0df0627e42e43f",
         "Title": "E.g. \"myJSON.txt\"",
         "Nodes": [],
-        "Left": 245.75,
+        "Left": 246.86163335216645,
         "Top": 415.5,
         "Width": 0.0,
         "Height": 0.0,
@@ -311,8 +500,8 @@
         "Background": "#FFC1D676"
       }
     ],
-    "X": 0.0,
-    "Y": 0.0,
-    "Zoom": 1.0
+    "X": -1004.2384416740497,
+    "Y": -143.66242837652248,
+    "Zoom": 0.84880703912276
   }
 }
