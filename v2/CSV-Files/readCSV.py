@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import csv
 import json
+import sys
 
 def readCSV(fileFilePathBefore,fileFilePathAfter,delimiter):
 	try:
@@ -98,6 +99,22 @@ def calculateDifference(tempMetaDataBefore,tempMetaDataAfter,metaDataHeader,comp
 		coordinatesBefore = tempMetaDataBefore.split(" ")
 		coordinatesAfter = tempMetaDataAfter.split(" ")
 
+		## DEBUG
+		coordinate = coordinatesAfter
+		idx = 1
+		coordinate, coordinateValue = coordinate[idx].split("=")
+		coordinateValue = float(coordinateValue)
+		coordinateValue = round(coordinateValue,2)
+
+		coordinateValue = str(coordinateValue)
+
+		print(coordinateValue)
+		sys.exit()
+
+		return metaDataHeader,coordinateValue
+		## DEBUG ## 
+
+		''' Ignore detla. Treat rotation in 2D and absolute values 
 		for coordinate in range(3):
 			coordinatesBefore[coordinate] = coordinatesBefore[coordinate].split("=")
 			coordinatesAfter[coordinate] = coordinatesAfter[coordinate].split("=")
@@ -108,6 +125,7 @@ def calculateDifference(tempMetaDataBefore,tempMetaDataAfter,metaDataHeader,comp
 			delta = round(delta,2)
 			rotationDelta.append(str(delta))
 		return metaDataHeader,rotationDelta
+		'''
 
 def exportData(array):
 	
