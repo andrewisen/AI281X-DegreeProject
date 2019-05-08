@@ -56,8 +56,7 @@ def main():
 
 	### CSV Path
 	# Absolute Path 
-	csvAbsPath = "C:\\_DegreeProject-Spring19-AndreWisen\\190130 - Revit Collision\\ids.csv"
-	csvAbsPath = "C:\\KTH\\DegreeProject\\190327_RevitSampleProject\\Collision\\colllisionIDs.csv"
+	csvAbsPath = ""
 	# Relative Path  
 	csvRelPath = ""
 
