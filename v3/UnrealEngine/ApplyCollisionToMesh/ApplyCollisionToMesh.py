@@ -41,10 +41,13 @@ def LoadAssets(assetPath):
 	# Based on:
 	# https://docs.unrealengine.com/en-us/Editor/Scripting-and-Automating-the-Editor/Editor-Scripting-How-Tos/Setting-up-Collision-Properties-in-Blueprints-and-Python
 
-	# Get a list of all Assets in the path
-	listOfAssets = unreal.EditorAssetLibrary.list_assets(assetPath)
-	# Load them into memory
-	assets = [unreal.EditorAssetLibrary.load_asset(eachAsset) for eachAsset in listOfAssets]
+	try:
+		# Get a list of all Assets in the path
+		listOfAssets = unreal.EditorAssetLibrary.list_assets(assetPath)
+		# Load them into memory
+		assets = [unreal.EditorAssetLibrary.load_asset(eachAsset) for eachAsset in listOfAssets]
+	except:
+		print('Loading assets failed.\nMake sure the assets are located in the folder "Revit".')
 
 	return assets
 
@@ -53,7 +56,7 @@ def FilterAssets(csvList,assets):
 	
 	for idName in csvList:
 		# Compare Revit assets with imported Unreal Assets
-		# Maybe add funcitons for the last letters in Swedish
+		# Maybe add funcitons for the last letters in the Swedish language
 
 		idName = idName[0]
 		idName = idName.replace(" ","_")
@@ -74,6 +77,8 @@ def AddBoxCollision(staticMesh):
 	unreal.EditorAssetLibrary.save_loaded_asset(staticMesh)
 
 def main():
+	ImportUnreal()
+
 	### SET PATHS ###
 
 	### Unreal Assets Path
@@ -89,11 +94,6 @@ def main():
 	csvRelPath = "" # Depricated
 
 	csvAbsPath = GetAbsolutePath()
-	print(csvAbsPath)
-
-	#ImportUnreal()
-
-	exit()
 
 	### GET DATA ###
 	# Get refrence items. Choose absolute or relative path as parameter
