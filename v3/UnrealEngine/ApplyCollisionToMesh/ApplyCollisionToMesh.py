@@ -10,11 +10,24 @@ def ImportUnreal():
 		sys.exit()
 
 def GetAbsolutePath():
-	absolutePath = os.path.realpath(__file__)
+	filePath = os.path.realpath(__file__)
+	fileDirectory = "\\".join(filePath.split("\\")[:-1]) + "\\"
+	fileName = filePath.split("\\")[-1]
 
+	for file in os.listdir(fileDirectory):
+		if file != fileName:
+			collisionFileName = file
+			if file.split(".")[-1] != "csv":
+				print('NB. Put the CSV collision file in the same directory as this script.')
+				sys.exit()
+
+	try:
+		absolutePath = fileDirectory + collisionFileName
+	except:
+		print('NB. Put the CSV collision file in the same directory as this script.')
+		sys.exit()
 
 	return absolutePath
-
 
 def GetCSV(csvPath):
 	file = open(csvPath, "r")
@@ -61,7 +74,6 @@ def AddBoxCollision(staticMesh):
 	unreal.EditorAssetLibrary.save_loaded_asset(staticMesh)
 
 def main():
-	ImportUnreal()
 	### SET PATHS ###
 
 	### Unreal Assets Path
@@ -78,6 +90,8 @@ def main():
 
 	csvAbsPath = GetAbsolutePath()
 	print(csvAbsPath)
+
+	#ImportUnreal()
 
 	exit()
 
