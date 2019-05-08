@@ -1,5 +1,20 @@
-import unreal
+import sys
 import csv
+import os
+
+def ImportUnreal():
+	try:
+		import unreal               
+	except ImportError:
+		print('NB. The file must be run in Unreal Engine using "Python Editor Script Plugin".')
+		sys.exit()
+
+def GetAbsolutePath():
+	absolutePath = os.path.realpath(__file__)
+
+
+	return absolutePath
+
 
 def GetCSV(csvPath):
 	file = open(csvPath, "r")
@@ -46,6 +61,7 @@ def AddBoxCollision(staticMesh):
 	unreal.EditorAssetLibrary.save_loaded_asset(staticMesh)
 
 def main():
+	ImportUnreal()
 	### SET PATHS ###
 
 	### Unreal Assets Path
@@ -56,9 +72,14 @@ def main():
 
 	### CSV Path
 	# Absolute Path 
-	csvAbsPath = ""
+	csvAbsPath = "" # Depricated
 	# Relative Path  
-	csvRelPath = ""
+	csvRelPath = "" # Depricated
+
+	csvAbsPath = GetAbsolutePath()
+	print(csvAbsPath)
+
+	exit()
 
 	### GET DATA ###
 	# Get refrence items. Choose absolute or relative path as parameter
